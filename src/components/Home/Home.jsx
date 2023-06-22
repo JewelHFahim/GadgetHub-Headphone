@@ -3,6 +3,7 @@ import HeaderSlider from '../HomePageContent/HeaderSlider/HeaderSlider'
 import NavDesk from '../Navbar/NavDesk/NavDesk'
 import HeaderBottom from '../HeaderBottom/HeaderBottom'
 import BestHeadphone from '../BestHeadphone/BestHeadphone'
+import Feature from '../Feature/Feature'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HeaderSlider />
       <HeaderBottom />
       <BestHeadphone />
+      <Feature />
     </div>
   )
 }
