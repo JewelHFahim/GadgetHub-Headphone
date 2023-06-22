@@ -5,6 +5,7 @@ import HeaderBottom from '../HeaderBottom/HeaderBottom'
 import BestHeadphone from '../BestHeadphone/BestHeadphone'
 import Feature from '../Feature/Feature'
 import BestService from '../BestService/BestService'
+import Latest from '../Latest/Latest'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <BestHeadphone />
       <Feature />
       <BestService />
+      <Latest />
     </div>
   )
 }
