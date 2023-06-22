@@ -4,6 +4,7 @@ import NavDesk from '../Navbar/NavDesk/NavDesk'
 import HeaderBottom from '../HeaderBottom/HeaderBottom'
 import BestHeadphone from '../BestHeadphone/BestHeadphone'
 import Feature from '../Feature/Feature'
+import BestService from '../BestService/BestService'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <HeaderBottom />
       <BestHeadphone />
       <Feature />
+      <BestService />
     </div>
   )
 }
