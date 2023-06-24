@@ -10,6 +10,7 @@ import ParallaxBg from '../ParallaxBg/ParallaxBg'
 import Review from '../Review/Review'
 import PublicSec from '../PublicSec/PublicSec'
 import Blog from '../Blog/Blog'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <Review />
       <PublicSec />
       <Blog />
+      <Footer />
     </div>
   )
 }

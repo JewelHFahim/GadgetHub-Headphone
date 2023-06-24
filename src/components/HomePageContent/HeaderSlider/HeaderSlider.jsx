@@ -2,11 +2,20 @@ import Image from 'next/image'
 import React from 'react';
 import styels from "./HeaderSlider.module.css";
 import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { HiMenuAlt1 } from 'react-icons/hi';
+
 
 
 const HeaderSlider = () => {
     return (
         <div className={`${styels.container} relative`}>
+
+            <button>
+                <div className='flex items-center w-[150px] rotate-[-90deg] absolute right-[-32px]'>
+                    <h2 className={`${styels.textStrock} font-poppins`}>MENU</h2>
+                    <HiMenuAlt1 className='text-[35px] text-white' />
+                </div>
+            </button>
 
             {/* Slider */}
             <div className={`${styels.imgConatainer}`}>
@@ -42,7 +51,7 @@ const HeaderSlider = () => {
                         <div className='w-[14px] h-[3px] bg-white bg-opacity-[50%] rounded-[30px] mr-4'></div>
                     </div>
                 </button>
-                
+
                 <div className='w-[342px] h-[24px] flex items-center gap-[14px]  rotate-[-360deg]'>
                     <p className='text-[20px] font-[500] font-inter text-[#C5C5C5]'>FOLLOW US</p>
 

@@ -1,0 +1,7 @@
+.textStrock {
+    color: transparent;
+    font-size: 100px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #bbb;
+}
