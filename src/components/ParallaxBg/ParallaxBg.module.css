@@ -13,3 +13,11 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
+
+.bgGradient1 {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 78%, rgba(0, 0, 0, 0) 100%);
+}
+
+.bgGradient2 {
+    background: linear-gradient(90deg, rgba(0, 0, 0) 100%, rgba(0, 0, 0, 0, 1) 78%);
+}

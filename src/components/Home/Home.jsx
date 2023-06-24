@@ -7,6 +7,9 @@ import Feature from '../Feature/Feature'
 import BestService from '../BestService/BestService'
 import Latest from '../Latest/Latest'
 import ParallaxBg from '../ParallaxBg/ParallaxBg'
+import Review from '../Review/Review'
+import PublicSec from '../PublicSec/PublicSec'
+import Blog from '../Blog/Blog'
 
 const Home = () => {
   return (
@@ -19,6 +22,9 @@ const Home = () => {
       <BestService />
       <Latest />
       <ParallaxBg />
+      <Review />
+      <PublicSec />
+      <Blog />
     </div>
   )
 }

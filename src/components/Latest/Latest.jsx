@@ -27,6 +27,7 @@ const Latest = () => {
     return (
 
         <div className='ml-[315px] mt-[147px]'>
+            
             <div className='flex justify-between items-center mr-[315px]'>
                 <div>
                     <h2 className='text-[60px] font-[800] font-poppins text-white leading-[50px]'>LATEST</h2>
