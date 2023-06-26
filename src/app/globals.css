@@ -4,3 +4,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.myBlogSwipper .swiper-pagination-bullets-dynamic,
+.myPublicSwipper .swiper-pagination-bullets-dynamic {
+    padding: 5px;
+    width: 250px !important;
+    rotate: 180deg;
+    margin-bottom: -20px;
+}
+
+.myBlogSwipper .swiper-pagination-bullet,
+.myPublicSwipper .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px !important;
+    background-color: white;
+}
+
+
+.myBlogSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
+.myPublicSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 30%, rgba(9, 9, 9, 0) 70%);
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+
+.myPublicSwipper .swiper-button-prev{
+    position: absolute;
+    z-index: 999;
+    width: 200px;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+}
+
+.myBlogSwipper .swiper-button-prev::after,
+.myPublicSwipper .swiper-button-prev::after {
+    content: "";
+}
+
+.myBlogSwipper .swiper-button-prev::before,
+.myPublicSwipper .swiper-button-prev::before {
+    display: inline-block;
+    width: 140px;
+    height: 51px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.myBlogSwipper .swiper-button-next,
+.myPublicSwipper .swiper-button-next {
+    position: absolute;
+    z-index: 999;
+    width: 200px;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+}
+
+.myBlogSwipper .swiper-button-next::before,
+.myPublicSwipper .swiper-button-next::before {
+    content: "";
+}
+
+
+.myBlogSwipper .swiper-button-next::after,
+.myPublicSwipper .swiper-button-next::after {
+    display: inline-block;
+    width: 140px;
+    height: 51px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}

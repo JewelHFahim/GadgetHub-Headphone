@@ -1,6 +1,14 @@
-import React from 'react'
-import styles from "./Blog.module.css"
-import Image from 'next/image'
+"use client"
+
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper";
+import Image from "next/image";
+import "./Blog.css"
+import Title from "@/utils/Title";
 
 const Blog = () => {
 
@@ -16,52 +24,75 @@ const Blog = () => {
         {
             title: "Headphone Daily Use Blog...",
             img: "/blog3.png"
+        },
+        {
+            title: "Headphone Daily Use Blog...",
+            img: "/blog1.png"
+        },
+        {
+            title: "Headphone Daily Use Blog...",
+            img: "/blog2.png"
+        },
+        {
+            title: "Headphone Daily Use Blog...",
+            img: "/blog3.png"
         }
     ]
 
     return (
-        <div className='mt-[135px] bg-[#191919] h-[777px] px-[315px]'>
+        <div className='mt-[135px] bg-[#191919] h-[777px] px-[300px]'>
 
             <div className='pt-[66px] flex justify-between items-center '>
                 <div>
-                    <h2 className='text-[60px] font-[800] font-poppins text-white leading-[50px]'>OUR</h2>
-                    <h1 className={`${styles.textStrock} font-poppins leading-[100px]`}>BLOG</h1>
+                    <Title primaryText="OUR"/>
+                    <Title secondaryText="BLOG"/>
                 </div>
+
                 <button className='flex items-center gap-[10px]'>
                     <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#191919]' />
                     <p className='text-[15px] font-poppins text-white'>View All</p>
                 </button>
             </div>
 
-            <div className='mt-[50px]  flex gap-[100px]'>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={20}
+                pagination={{
+                    dynamicBullets: true,
+                    clickable: true,
+                }}
+
+                modules={[Pagination, Navigation]}
+                navigation={true}
+                className="myBlogSwipper mt-[50px]"
+            >
                 {
                     datas.map((item, i) => (
-                        <div key={i} className='w-[344px] h-[325px] border p-[17px] relative '>
+                        <SwiperSlide key={i} className=''>
 
-                            <Image src={item.img} alt="" width={375} height={211} className='absolute ' />
+                            <div className="w-[344px] h-[324px] pl-[20px] pt-[17px] border relative">
 
-                            <div className='rotate-[-90deg] flex items-center gap-[10px] absolute right-[-120px] top-[100px]'>
-                                <p className='rotate-[-360deg] text-[14px] font-poppins font-[600] text-white text-opacity-[50%]'>30 AUGUST 2023</p>
-                                <span className='w-[60px] h-[2px] bg-white bg-opacity-[50%]'></span>
+                                <Image src={item.img} alt="" width={344} height={211} className='absolute' />
+
+                                <div className='rotate-[-90deg] flex items-center gap-[10px] absolute right-[-124px] top-[100px]'>
+                                    <p className='rotate-[-360deg] text-[14px] font-poppins font-[600] text-white text-opacity-[50%]'>30 AUGUST 2023</p>
+                                    <span className='w-[60px] h-[2px] bg-white bg-opacity-[50%]'></span>
+                                </div>
+
+
+                                <p className='text-[20px] font-[600] font-poppins text-white mt-[200px] w-[290px]'>{item.title}</p>
+
+                                <button className='flex items-center gap-[10px] mt-[10px]'>
+                                    <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#131313]' />
+                                    <p className='text-[15px] font-poppins text-white'>View All Feature</p>
+                                </button>
                             </div>
 
-
-                            <p className='text-[20px] font-[600] font-poppins text-white mt-[210px]'>{item.title}</p>
-
-                            <button className='flex items-center gap-[10px] mt-[10px]'>
-                                <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#131313]' />
-                                <p className='text-[15px] font-poppins text-white'>View All Feature</p>
-                            </button>
-                        </div>
+                        </SwiperSlide>
                     ))
                 }
-            </div>
 
-            <div className='mt-[76px] flex justify-between items-center mx-[90px]'>
-                <button><Image src="/leftBtn.png" alt="" width={120} height={44} className='' /></button>
-                <Image src="/slideLines.png" alt="" width={190} height={28} className='' />
-                <button><Image src="/rightBtn.png" alt="" width={120} height={44} className='' /></button>
-            </div>
+            </Swiper>
 
         </div>
     )

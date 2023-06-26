@@ -1,0 +1,80 @@
+.myLatestSwipper {
+    padding-bottom: 100px;
+
+}
+
+.myLatestSwipper .swiper-pagination-bullets-dynamic {
+    padding: 5px;
+    width: 200px !important;
+    rotate: 180deg;
+    margin-bottom: -20px;
+
+}
+
+.myLatestSwipper .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px !important;
+    background-color: white;
+}
+
+.myLatestSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 30%, rgba(9, 9, 9, 0) 70%);
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+
+.myLatestSwipper .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    left: 28%;
+    transform: translateX(-10%);
+    white-space: nowrap;
+}
+
+.myLatestSwipper .swiper-button-prev {
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+    z-index: 999;
+    width: 400px;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+
+}
+
+.myLatestSwipper .swiper-button-prev::after {
+    content: "";
+}
+
+.myLatestSwipper .swiper-button-prev::before {
+    display: inline-block;
+    width: 140px;
+    height: 51px;
+    background-image: url('/leftBtn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.myLatestSwipper .swiper-button-next {
+    position: absolute;
+    bottom: 0px;
+    right: 280px;
+    z-index: 999;
+    width: 400px;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+
+}
+
+.myLatestSwipper .swiper-button-next::before {
+    content: "";
+}
+
+.myLatestSwipper .swiper-button-next::after {
+    display: inline-block;
+    width: 140px;
+    height: 51px;
+    background-image: url('/rightBtn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

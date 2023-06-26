@@ -3,6 +3,7 @@ import React from 'react';
 import styels from "./HeaderSlider.module.css";
 import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import HeaderSlide from '@/utils/HeaderSlide';
 
 
 
@@ -10,6 +11,7 @@ const HeaderSlider = () => {
     return (
         <div className={`${styels.container} relative`}>
 
+            {/* Menu */}
             <button>
                 <div className='flex items-center w-[150px] rotate-[-90deg] absolute right-[-32px]'>
                     <h2 className={`${styels.textStrock} font-poppins`}>MENU</h2>
@@ -18,33 +20,12 @@ const HeaderSlider = () => {
             </button>
 
             {/* Slider */}
-            <div className={`${styels.imgConatainer}`}>
-                <Image src="/slideImgOne.png" alt='' fill={true} className={styels.img} />
-            </div>
-
-
-            {/* Slider Button */}
-            <div className='flex items-center justify-between pt-[20px]'>
-
-                <button>
-                    <div className='flex items-center gap-[7px]'>
-                        <Image src="/leftIcon.png" alt='' width={51} height={51} />
-                        <p className='font-poppins text-[15px] font-[500] text-[#fff] text-opacity-[50%]'>Previous Slide</p>
-                    </div>
-                </button>
-
-                <button>
-                    <div className='flex items-center gap-[7px]'>
-                        <p className='font-poppins text-[15px] font-[500] text-[#fff] text-opacity-[50%]'>Next Slide</p>
-                        <Image src="/rightIcon.png" alt='' width={51} height={51} />
-                    </div>
-
-                </button>
+            <div className="w-full">
+                <HeaderSlide />
             </div>
 
             {/* Follow Us Icons */}
-
-            <div className='absolute left-[-170px] bottom-[126px] rotate-[-90deg] flex items-center gap-[20px]'>
+            <div className='absolute left-[-170px] bottom-[126px] rotate-[-90deg] flex items-center gap-[20px] z-[999]'>
 
                 <button>
                     <div className='w-[61px] h-[31px] border-[3px] border-[#C5C5C5] border-opacity-[50%] rounded-[47px] flex justify-end items-center'>
@@ -62,17 +43,10 @@ const HeaderSlider = () => {
                         <button><FaYoutube className='text-[20px] text-[#C5C5C5] rotate-[90deg]' /></button>
                         <button> <FaTwitter className='text-[20px] text-[#C5C5C5] rotate-[90deg]' /></button>
                     </div>
-
                 </div>
 
             </div>
 
-
-
-            {/* Slider Dots */}
-            <div className='absolute right-7 top-[42.5%]'>
-                <Image src="/slideDots.png" alt='' width={27} height={91} />
-            </div>
         </div>
     )
 }

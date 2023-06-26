@@ -11,6 +11,7 @@ import Review from '../Review/Review'
 import PublicSec from '../PublicSec/PublicSec'
 import Blog from '../Blog/Blog'
 import Footer from '../Footer/Footer'
+import Title from '@/utils/Title'
 
 const Home = () => {
   return (

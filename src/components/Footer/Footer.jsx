@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from "./Footer.module.css";
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa';
+import Title from '@/utils/Title';
 
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
 
                 <Image src="/Logo2.png" alt='' width={138} height={138} />
 
-                <h1 className={`${styles.textStrock} font-poppins leading-[70px]`}>MUSIC BUDDY</h1>
+                <Title secondaryText="MUSIC BUDDY" />
 
                 <div className='flex items-center gap-[30px] text-[22px] text-white'>
                     <button><FaFacebookF /></button>

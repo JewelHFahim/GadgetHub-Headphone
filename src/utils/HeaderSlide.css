@@ -1,0 +1,109 @@
+.imgConatainer {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    margin: 0px auto;
+}
+
+.img {
+    width: 100%;
+    height: 900px;
+    padding: 0px 85px 85px 85px;
+    object-fit: content;
+}
+
+.swiper-pagination-horizontal {
+    position: absolute;
+    bottom: 15px;
+    right: -140px !important;
+    font-size: 40px;
+    color: white !important;
+    font-weight: 600;
+}
+
+.swiper-pagination {
+    position: absolute;
+    right: -150px !important;
+}
+
+.swiper-pagination-bullets-dynamic {
+    padding: 5px;
+    width: 300px !important;
+    rotate: 90deg;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px !important;
+    background-color: white;
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 30%, rgba(9, 9, 9, 0) 70%);
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    left: 90%;
+    transform: translateX(-135%);
+    white-space: nowrap;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    bottom: 20px;
+    left: 85px;
+    z-index: 999;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+}
+
+.swiper-button-prev::after {
+    content: "Previous Slide";
+}
+
+.swiper-button-prev::before {
+    content: "";
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    background-image: url('/leftIcon.png');
+    background-size: cover;
+}
+
+.swiper-button-next {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    z-index: 999;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.509);
+    cursor: pointer;
+}
+
+.swiper-button-next::before {
+    content: "Next Slide";
+}
+
+.swiper-button-next::after {
+    content: "";
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    background-image: url('/rightIcon.png');
+    background-size: cover;
+    opacity: 0.5
+}
