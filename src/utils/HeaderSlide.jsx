@@ -36,13 +36,13 @@ const HeaderSlide = () => {
           // type: "fraction",
         }}
         modules={[Pagination, Autoplay, Navigation]}
-        className="mySwiper"
+        className="myHeaderSwiper"
         navigation={true}
         loop={true}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
       >
         {
           datas.map((item, i) => (

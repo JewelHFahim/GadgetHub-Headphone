@@ -15,7 +15,7 @@ import Title from '@/utils/Title'
 
 const Home = () => {
   return (
-    <div className='bg-[#131313] pb-32'>
+    <div className='bg-[#131313] pb-10'>
       <NavDesk />
       <HeaderSlider />
       <HeaderBottom />
