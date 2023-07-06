@@ -76,6 +76,7 @@ const PublicSec = () => {
             <Swiper
                 slidesPerView={6}
                 spaceBetween={10}
+                loop={true}
                 pagination={{
                     dynamicBullets: true,
                     clickable: true,

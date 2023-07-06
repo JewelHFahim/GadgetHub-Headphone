@@ -39,11 +39,12 @@ const HeaderSlide = () => {
         className="myHeaderSwiper"
         navigation={true}
         loop={true}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+      // autoplay={{
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      // }}
       >
+
         {
           datas.map((item, i) => (
             <SwiperSlide key={i}>
@@ -53,6 +54,8 @@ const HeaderSlide = () => {
             </SwiperSlide>
           ))
         }
+
+     
       </Swiper>
 
     </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import LatestSlider from '@/utils/LatestSlider'
+import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
 import Title from '@/utils/Title'
 
 

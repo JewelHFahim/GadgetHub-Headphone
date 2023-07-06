@@ -54,6 +54,7 @@ const Review = () => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={80}
+                loop={true}
                 centeredSlides={true}
                 pagination={{
                     dynamicBullets: true,
@@ -90,7 +91,6 @@ const Review = () => {
 
             <div className="w-[350px] h-full absolute left-0 top-0 bgGradient1" />
             <div className="w-[320px] h-full absolute right-0 top-0 bg-red-60 bgGradient2" />
-
         </div>
     )
 }

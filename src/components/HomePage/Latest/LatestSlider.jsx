@@ -16,6 +16,7 @@ const LatestSlider = ({ datas }) => {
       <Swiper
         slidesPerView={3}
         spaceBetween={20}
+        loop={true}
         pagination={{
           dynamicBullets: true,
           clickable: true,

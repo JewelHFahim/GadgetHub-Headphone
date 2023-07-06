@@ -1,17 +1,18 @@
+"use client"
+
 import React from 'react'
-import HeaderSlider from '../HomePageContent/HeaderSlider/HeaderSlider'
 import NavDesk from '../Navbar/NavDesk/NavDesk'
-import HeaderBottom from '../HeaderBottom/HeaderBottom'
-import BestHeadphone from '../BestHeadphone/BestHeadphone'
-import Feature from '../Feature/Feature'
-import BestService from '../BestService/BestService'
-import Latest from '../Latest/Latest'
-import ParallaxBg from '../ParallaxBg/ParallaxBg'
-import Review from '../Review/Review'
-import PublicSec from '../PublicSec/PublicSec'
-import Blog from '../Blog/Blog'
+import HeaderBottom from '../HomePage/HeaderBottom/HeaderBottom'
+import BestHeadphone from '../HomePage/BestHeadphone/BestHeadphone'
+import Feature from '../HomePage/Feature/Feature'
+import BestService from '../HomePage/BestService/BestService'
+import Latest from '../HomePage/Latest/Latest'
+import ParallaxBg from '../HomePage/ParallaxBg/ParallaxBg'
+import Review from '../HomePage/Review/Review'
+import PublicSec from '../HomePage/PublicSec/PublicSec'
+import Blog from '../HomePage/Blog/Blog'
 import Footer from '../Footer/Footer'
-import Title from '@/utils/Title'
+import HeaderSlider from '../HomePage/Header/Header'
 
 const Home = () => {
   return (

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jaldi:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 @tailwind base;
@@ -9,42 +9,30 @@
     font-size: 40px;
 }
 
-.myLatestSwipper .swiper-pagination-bullets-dynamic,
-.myReviewSwipper .swiper-pagination-bullets-dynamic,
-.myBlogSwipper .swiper-pagination-bullets-dynamic,
-.myPublicSwipper .swiper-pagination-bullets-dynamic {
+
+.swiper-pagination-bullets-dynamic {
     padding: 5px;
     width: 250px !important;
     rotate: 180deg;
     margin-bottom: 0px;
 }
 
-.myHeaderSwiper .swiper-pagination-bullet,
-.myLatestSwipper .swiper-pagination-bullet,
-.myReviewSwipper .swiper-pagination-bullet,
-.myBlogSwipper .swiper-pagination-bullet,
-.myPublicSwipper .swiper-pagination-bullet {
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
     width: 20px;
     height: 20px;
     margin: 0px 5px !important;
     background-color: white;
 }
 
-.myHeaderSwiper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
-.myLatestSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
-.myReviewSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
-.myBlogSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main,
-.myPublicSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 30%, rgba(9, 9, 9, 0) 70%);
     transform: scale(1.1);
     border: 1px solid white;
 }
 
-.myHeaderSwiper .swiper-button-prev,
-.myLatestSwipper .swiper-button-prev ,
-.myReviewSwipper .swiper-button-prev,
-.myBlogSwipper .swiper-button-prev,
-.myPublicSwipper .swiper-button-prev {
+
+.swiper-button-prev {
     position: absolute;
     z-index: 999;
     width: 200px;
@@ -52,18 +40,13 @@
     cursor: pointer;
 }
 
-.myLatestSwipper .swiper-button-prev::after,
-.myReviewSwipper .swiper-button-prev::after,
-.myBlogSwipper .swiper-button-prev::after,
-.myPublicSwipper .swiper-button-prev::after {
+
+.swiper-button-prev::after {
     content: "";
 }
 
-.myHeaderSwiper .swiper-button-prev::before,
-.myLatestSwipper .swiper-button-prev::before,
-.myReviewSwipper .swiper-button-prev::before,
-.myBlogSwipper .swiper-button-prev::before,
-.myPublicSwipper .swiper-button-prev::before {
+
+.swiper-button-prev::before {
     content: "";
     display: inline-block;
     width: 140px;
@@ -72,11 +55,8 @@
     background-repeat: no-repeat;
 }
 
-.myHeaderSwiper .swiper-button-next,
-.myLatestSwipper .swiper-button-next,
-.myReviewSwipper .swiper-button-next,
-.myBlogSwipper .swiper-button-next,
-.myPublicSwipper .swiper-button-next {
+
+.swiper-button-next {
     position: absolute;
     z-index: 999;
     width: 200px;
@@ -87,18 +67,13 @@
     gap: 5px;
 }
 
-.myLatestSwipper .swiper-button-next::before,
-.myReviewSwipper .swiper-button-next::before,
-.myBlogSwipper .swiper-button-next::before,
-.myPublicSwipper .swiper-button-next::before {
+
+.swiper-button-next::before {
     content: "";
 }
 
-.myHeaderSwiper .swiper-button-next::after,
-.myLatestSwipper .swiper-button-next::after,
-.myReviewSwipper .swiper-button-next::after,
-.myBlogSwipper .swiper-button-next::after,
-.myPublicSwipper .swiper-button-next::after {
+
+.swiper-button-next::after {
     content: "";
     display: inline-block;
     width: 140px;

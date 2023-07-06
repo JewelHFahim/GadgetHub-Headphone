@@ -57,6 +57,7 @@ const Blog = () => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={20}
+                loop={true}
                 pagination={{
                     dynamicBullets: true,
                     clickable: true,
@@ -68,7 +69,7 @@ const Blog = () => {
             >
                 {
                     datas.map((item, i) => (
-                        <SwiperSlide key={i} className=''>
+                        <SwiperSlide key={i} className='hover:scale-[1.03] transform duration-300 m-2'>
 
                             <div className="w-[344px] h-[324px] pl-[20px] pt-[17px] border relative">
 
@@ -78,7 +79,6 @@ const Blog = () => {
                                     <p className='rotate-[-360deg] text-[14px] font-poppins font-[600] text-white text-opacity-[50%]'>30 AUGUST 2023</p>
                                     <span className='w-[60px] h-[2px] bg-white bg-opacity-[50%]'></span>
                                 </div>
-
 
                                 <p className='text-[20px] font-[600] font-poppins text-white mt-[200px] w-[290px]'>{item.title}</p>
 
