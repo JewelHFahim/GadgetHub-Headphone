@@ -1,6 +1,12 @@
-import AppContext from '@/Context/AppContext'
+"use client"
+
+import AppContext, { ThemeContext } from '@/Context/AppContext'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import NavDesk from '@/components/Navbar/NavDesk/NavDesk'
+import Menu from '@/components/Menu/Menu'
+import { HiMenuAlt1 } from 'react-icons/hi'
+import React, { useContext } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,11 +16,35 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState)
+  }
+
   return (
     <html lang="en">
       <body className={inter.className}>
-      <AppContext>{children}</AppContext>
+        <AppContext>
+          <div className='bg-[#131313]'>
 
+            <div className='pt-[15px]'>
+              <NavDesk />
+            </div>
+
+            <button onClick={toggleDrawer} className='absolute right-[30px] top-[15px] lg:top-[70px] lg:right-[-30px] z-[99] rotate-[-90deg]'>
+              <div className='flex items-center w-[40px] lg:w-[150px]'>
+                <h2 className='textStrock font-poppins hidden lg:block'>Menu</h2>
+                <HiMenuAlt1 className='text-[40px] text-white text-opacity-[50%]' />
+              </div>
+            </button>
+            <Menu isOpen={isOpen} toggleDrawer={toggleDrawer} />
+
+            {children}
+
+          </div>
+        </AppContext>
       </body>
     </html>
   )

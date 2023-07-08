@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
-import Title from '@/utils/Title'
+import Title from '@/utils/Subtitle'
+import SubTitle from '@/utils/Subtitle'
+import PrimaryTitle from '@/utils/PrimaryTitle'
 
 
 
@@ -45,9 +47,9 @@ const Latest = () => {
         <div className='ml-[315px] mt-[147px]'>
 
             <div className='flex justify-between items-center mr-[315px]'>
-                <div>
-                    <Title primaryText="LATEST" />
-                    <Title secondaryText="HEADSET" />
+            <div>
+                    <SubTitle>LATEST</SubTitle>
+                    <PrimaryTitle className="text-[120px] font-poppins" >HEADSET</PrimaryTitle>
                 </div>
                 <button className='flex items-center gap-[10px]'>
                     <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#191919]' />

@@ -1,19 +1,20 @@
-.textStrock {
-    color: transparent;
-    font-size: 150px;
-    font-weight: 900;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #bbb;
-}
-
-.bestOneImgContainer{
+.bestOneImgContainer {
     width: 575px;
     height: 488px;
     position: relative;
 }
-.bestOneImg{
+
+.bestOneImg {
     z-index: 0;
     width: 100%;
     height: 100%;
     object-fit: content;
+}
+
+@media only screen and (max-width: 600px) {
+    .bestOneImgContainer {
+        width: 220px;
+        height: 200px;
+    }
+
 }

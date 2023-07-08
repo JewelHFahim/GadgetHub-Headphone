@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa';
-import Title from '@/utils/Title';
+import PrimaryTitle from '@/utils/PrimaryTitle';
 
 
 const Footer = () => {
@@ -13,7 +13,9 @@ const Footer = () => {
 
                 <Image src="/Logo2.png" alt='' width={138} height={138} />
 
-                <Title secondaryText="MUSIC BUDDY" />
+                <div className="text-center">
+                <PrimaryTitle className="text-[120px] font-poppins" >Microbuddy</PrimaryTitle>
+            </div>
 
                 <div className='flex items-center gap-[30px] text-[22px] text-white'>
                     <button><FaFacebookF /></button>

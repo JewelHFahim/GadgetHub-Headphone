@@ -9,7 +9,8 @@ import Image from "next/image";
 import "./Review.css"
 import { GrStar } from 'react-icons/gr';
 import { IoStarOutline } from 'react-icons/io5';
-import Title from "@/utils/Title";
+import SubTitle from "@/utils/Subtitle";
+import PrimaryTitle from "@/utils/PrimaryTitle";
 
 
 const Review = () => {
@@ -46,9 +47,9 @@ const Review = () => {
     return (
         <div className='pt-[120px] pb-[80px] bg-[#191919] px-[200px] relative'>
 
-            <div className='text-center'>
-                <Title primaryText="PUBLIC" />
-                <Title secondaryText="REVIEW" />
+            <div className="flex flex-col items-center">
+                <SubTitle>Public</SubTitle>
+                <PrimaryTitle className="text-[120px] font-poppins" >Review</PrimaryTitle>
             </div>
 
             <Swiper

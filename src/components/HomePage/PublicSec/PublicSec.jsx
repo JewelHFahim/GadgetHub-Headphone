@@ -8,7 +8,9 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./PublicSec.css"
-import Title from "@/utils/Title";
+import Title from "@/utils/Subtitle";
+import SubTitle from "@/utils/Subtitle";
+import PrimaryTitle from "@/utils/PrimaryTitle";
 
 
 const PublicSec = () => {
@@ -67,9 +69,9 @@ const PublicSec = () => {
     return (
         <div className='mt-[120px] mr-[315px]'>
 
-            <div className='text-right'>
-                <Title primaryText="PUBLIC"/>
-                <Title secondaryText="REALS & SHORTS"/>
+            <div className="text-right">
+                <SubTitle>Public</SubTitle>
+                <PrimaryTitle className="text-[120px] font-poppins" >Reals & Shorts</PrimaryTitle>
             </div>
 
 

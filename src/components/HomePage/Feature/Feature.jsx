@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import Title from '@/utils/Title'
+import Title from '@/utils/Subtitle'
+import SubTitle from '@/utils/Subtitle'
+import PrimaryTitle from '@/utils/PrimaryTitle'
 
 const Feature = () => {
 
@@ -29,23 +31,26 @@ const Feature = () => {
     ]
 
     return (
-        <div className='px-[310px] mt-[75px]'>
+        <div className='px-[20px] lg:px-[310px] pt-[30px] lg:mt-[75px]'>
 
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-start lg:items-center'>
 
-                <div className=''>
-                    <Title primaryText="OUR" />
-                    <Title secondaryText="FEATURE" />
+                <div>
+                    <SubTitle className=" text-[40px] lg:text-[60px] ">OUR</SubTitle>
+                    <PrimaryTitle className="text-[50px] lg:text-[120px] font-poppins leading-[40px] lg:leading-[100px]" >Feature</PrimaryTitle>
                 </div>
 
-                <button className='flex items-center gap-[10px]'>
-                    <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#191919]' />
-                    <p className='text-[15px] font-poppins text-white'>View All Feature</p>
+                <button className='flex items-center gap-[10px] mt-2 lg:mt-0'>
+                    <div className='relative w-[25px] h-[25px] lg:w-[44px] lg:h-[44px]'>
+                        <Image src="/rightIcon.png" fill={true} alt='' className='p-2 rounded-full bg-[#191919]' />
+                    </div>
+
+                    <p className='text-[10px]  lg:text-[15px] font-poppins text-white'>View All Feature</p>
                 </button>
             </div>
 
-
-            <div className='mt-[12px] grid grid-cols-3'>
+            {/* 
+            <div className='mt-[12px] grid grid-cols-1 lg:grid-cols-3'>
 
 
                 {
@@ -69,7 +74,7 @@ const Feature = () => {
                 }
 
 
-            </div>
+            </div> */}
 
         </div>
     )

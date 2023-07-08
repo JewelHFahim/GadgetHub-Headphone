@@ -8,7 +8,9 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./Blog.css"
-import Title from "@/utils/Title";
+import Title from "@/utils/Subtitle";
+import SubTitle from "@/utils/Subtitle";
+import PrimaryTitle from "@/utils/PrimaryTitle";
 
 const Blog = () => {
 
@@ -43,10 +45,11 @@ const Blog = () => {
         <div className='mt-[135px] bg-[#191919] h-[777px] px-[300px]'>
 
             <div className='pt-[66px] flex justify-between items-center '>
-                <div>
-                    <Title primaryText="OUR"/>
-                    <Title secondaryText="BLOG"/>
-                </div>
+
+            <div >
+                <SubTitle>Public</SubTitle>
+                <PrimaryTitle className="text-[120px] font-poppins" >Review</PrimaryTitle>
+            </div>
 
                 <button className='flex items-center gap-[10px]'>
                     <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#191919]' />

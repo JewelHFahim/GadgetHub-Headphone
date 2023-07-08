@@ -74,3 +74,55 @@
     width: 51px;
     background-image: url('/rightIcon.png');
 }
+
+@media only screen and (max-width: 600px) {
+    .imgConatainer {
+        height: 260px;
+    }
+
+    .img {
+        height: 260px;
+        padding: 10px 0px 30px 0px;
+    }
+
+    .myHeaderSwiper .swiper-pagination-bullets-dynamic {
+        padding: 2px;
+        width: 120px !important;
+    }
+
+    .myHeaderSwiper .swiper-pagination-bullet {
+        margin: 0px 5px !important;
+    }
+
+    .myHeaderSwiper .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        left: 80%;
+        transform: translateX(-85%);
+    }
+
+    .myHeaderSwiper .swiper-button-prev {
+        bottom: -30px;
+        left: 20px;
+    }
+
+    .myHeaderSwiper .swiper-button-prev::after {
+        content: "";
+    }
+
+    .myHeaderSwiper .swiper-button-prev::before {
+        width: 21px;
+    }
+
+    .myHeaderSwiper .swiper-button-next {
+        bottom: -30px;
+        right: -150px;
+    }
+
+    .myHeaderSwiper .swiper-button-next::before {
+        content: "";
+    }
+
+    .myHeaderSwiper .swiper-button-next::after {
+        width: 21px;
+    }
+
+}

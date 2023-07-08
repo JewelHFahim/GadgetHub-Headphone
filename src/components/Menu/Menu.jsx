@@ -8,14 +8,10 @@ import { FiPlusCircle } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaMinus, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiSearchAlt } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
+import Link from 'next/link'
 
 
-
-
-const Menu = () => {
-
-    const { isOpen, toggleDrawer } = useContext(ThemeContext);
-    console.log(toggleDrawer)
+const Menu = ({ isOpen, toggleDrawer }) => {
 
     const [open, setOpen] = useState(false);
 
@@ -27,7 +23,7 @@ const Menu = () => {
     const menus = [
         {
             title: "Home",
-            url: ""
+            url: "/"
         },
         {
             title: "Blog",
@@ -35,7 +31,7 @@ const Menu = () => {
         },
         {
             title: "Headset",
-            url: "",
+            url: "/headset",
             submenu: [
                 {
                     subttitle: 'Gaming',
@@ -80,7 +76,7 @@ const Menu = () => {
                     <ul className='lg:w-[60%]'>
 
                         {/* Logo */}
-                        <div className=' lg:mb-[150px] pt-[50px] lg:mt-[44px] ml-[-48px] lg:block flex justify-center'>
+                        <div className=' lg:mb-[150px] pt-[10px] lg:mt-[44px] ml-[-48px] lg:block flex justify-center'>
                             <NavDesk />
                         </div>
 
@@ -97,21 +93,31 @@ const Menu = () => {
                             {
                                 menus.map((menu, i) => (
                                     <details key={i} open className='border-b border-white border-opacity-[5%] flex'>
-                                        <summary className='mb-4 flex justify-between items-center'
-                                            onClick={handleOpen}>
 
-                                            {menu.title}
+                                        {
+                                            menu.submenu ?
 
-                                            {
-                                                menu.submenu &&
-                                                <div className='my-[-10px]'>
+
+                                                < summary onClick={handleOpen} className='mb-4 flex justify-between items-center'>
+
+                                                 <a href={menu.url}>{menu.title}</a>  
+
                                                     {
-                                                        open ? <FiPlusCircle /> : <FaMinus />
+                                                        menu.submenu &&
+                                                        <div className='my-[-10px]' >
+                                                            {
+                                                                open ? <FiPlusCircle /> : <FaMinus />
+                                                            }
+                                                        </div>
                                                     }
-                                                </div>
-                                            }
-
-                                        </summary>
+                                                    
+                                                </summary>
+                                
+                                                :
+                                                <summary className='mb-4 flex justify-between items-center'>
+                                                    <Link href={menu.url}>  {menu.title}  </Link>
+                                                </summary>
+                                        }
 
                                         {
                                             menu.submenu &&
@@ -165,7 +171,7 @@ const Menu = () => {
                         </div>
                     </div>
                 </div>
-            </Drawer>
+            </Drawer >
         </>
     )
 }
