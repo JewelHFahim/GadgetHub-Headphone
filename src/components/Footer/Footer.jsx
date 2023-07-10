@@ -7,15 +7,17 @@ import PrimaryTitle from '@/utils/PrimaryTitle';
 const Footer = () => {
 
     return (
-        <div className=' mt-[57px] mx-[315px]'>
+        <div className='mt-[30px] lg:mt-[57px] lg:mx-[315px] mx-[42px]'>
 
-            <div className='flex flex-col justify-center  items-center gap-[20px]'>
+            <div className='flex flex-col justify-center  items-center lg:gap-[20px]'>
 
-                <Image src="/Logo2.png" alt='' width={138} height={138} />
+                <div className='w-[64px] h-[64px] lg:w-[138px] lg:h-[138px] relative'>
+                    <Image src="/Logo2.png" alt='' fill />
+                </div>
 
                 <div className="text-center">
-                <PrimaryTitle className="text-[120px] font-poppins" >Microbuddy</PrimaryTitle>
-            </div>
+                    <PrimaryTitle className="text-[35px] lg:text-[120px] font-poppins" >Microbuddy</PrimaryTitle>
+                </div>
 
                 <div className='flex items-center gap-[30px] text-[22px] text-white'>
                     <button><FaFacebookF /></button>
@@ -26,9 +28,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='mt-[60px] flex justify-between'>
+            <div className='mt-[60px] grid grid-cols-1 gap-[26px] lg:flex justify-between items-center text-center lg:text-left'>
 
-                <div>
+                <div className='flex lg:block flex-col items-center'>
                     <p className='text-[25px] font-[600] font-poppins text-white'> PAGES</p>
                     <div className='flex items-center gap-[4px]'>
                         <span className='w-[21px] h-[1px] bg-white'></span>
@@ -40,7 +42,7 @@ const Footer = () => {
                     <p className='text-[15px] font-[600] font-poppins text-white text-opacity-[50%]'>CONTACT US</p>
                 </div>
 
-                <div>
+                <div className='flex lg:block flex-col items-center'>
                     <p className='text-[25px] font-[600] font-poppins text-white'> CONTACT</p>
                     <div className='flex items-center gap-[4px]'>
                         <span className='w-[21px] h-[1px] bg-white'></span>
@@ -52,7 +54,7 @@ const Footer = () => {
                     <p className='text-[15px] font-[600] font-poppins text-white text-opacity-[50%]'>info@company.com</p>
                 </div>
 
-                <div>
+                <div className='flex lg:block flex-col items-center'>
                     <p className='text-[25px] font-[600] font-poppins text-white'> ADDRESS</p>
                     <div className='flex items-center gap-[4px]'>
                         <span className='w-[21px] h-[1px] bg-white'></span>
@@ -61,7 +63,6 @@ const Footer = () => {
                     </div>
                     <p className='text-[15px] font-[600] font-poppins text-white text-opacity-[50%] mt-6'>Company Location- Wolrd</p>
                 </div>
-
 
             </div>
 

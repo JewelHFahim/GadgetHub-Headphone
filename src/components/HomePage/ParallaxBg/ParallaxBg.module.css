@@ -1,7 +1,6 @@
 .parallaxWorld .parallaxOne {
     margin-top: 130px;
-    padding-top: 270px;
-    padding-bottom: 270px;
+    padding: 270px 0px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -20,4 +19,12 @@
 
 .bgGradient2 {
     background: linear-gradient(90deg, rgba(0, 0, 0) 100%, rgba(0, 0, 0, 0, 1) 78%);
+}
+
+@media only screen and (max-width: 600px) {
+    .parallaxWorld .parallaxOne {
+        margin-top: 40px;
+        padding: 100px 0px;
+        height: 200px;
+    }
 }

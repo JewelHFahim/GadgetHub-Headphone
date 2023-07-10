@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import Title from '@/utils/Subtitle'
 import SubTitle from '@/utils/Subtitle'
 import PrimaryTitle from '@/utils/PrimaryTitle'
+import "./Feature.css"
+import FeatureSlider from './FeatureSlider'
 
 const Feature = () => {
 
@@ -31,7 +32,7 @@ const Feature = () => {
     ]
 
     return (
-        <div className='px-[20px] lg:px-[310px] pt-[30px] lg:mt-[75px]'>
+        <div className='px-[20px] lg:px-[310px] pt-[30px] pb-[20px] lg:mt-[75px]'>
 
             <div className='flex justify-between items-start lg:items-center'>
 
@@ -49,9 +50,8 @@ const Feature = () => {
                 </button>
             </div>
 
-            {/* 
-            <div className='mt-[12px] grid grid-cols-1 lg:grid-cols-3'>
 
+            <div className='hidden mt-[12px] lg:grid grid-cols-1 lg:grid-cols-3'>
 
                 {
                     datas.map((item, index) => (
@@ -73,8 +73,11 @@ const Feature = () => {
                     ))
                 }
 
-
-            </div> */}
+            </div> 
+          
+            <div className='lg:hidden'>
+                <FeatureSlider datas={datas} />
+            </div>
 
         </div>
     )

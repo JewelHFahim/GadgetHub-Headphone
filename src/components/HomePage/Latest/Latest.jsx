@@ -44,14 +44,16 @@ const Latest = () => {
 
     return (
 
-        <div className='ml-[315px] mt-[147px]'>
+        <div className=' lg:ml-[315px] mt-[26px] lg:mt-[147px]'>
 
-            <div className='flex justify-between items-center mr-[315px]'>
-            <div>
-                    <SubTitle>LATEST</SubTitle>
-                    <PrimaryTitle className="text-[120px] font-poppins" >HEADSET</PrimaryTitle>
+            <div className='flex justify-between items-center lg:mr-[315px]'>
+
+                <div className='pl-[16px]'>
+                    <SubTitle className="text-[30px] lg:text-[60px]">LATEST</SubTitle>
+                    <PrimaryTitle className="text-[60px] mt-[-30px] lg:mt-[0px] lg:text-[120px] font-poppins" >HEADSET</PrimaryTitle>
                 </div>
-                <button className='flex items-center gap-[10px]'>
+
+                <button className='hidden lg:flex items-center gap-[10px]'>
                     <Image src="/rightIcon.png" alt="" width={44} height={44} className='p-2 rounded-full bg-[#191919]' />
                     <p className='text-[15px] font-poppins text-white'>View All</p>
                 </button>

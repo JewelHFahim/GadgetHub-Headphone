@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -14,6 +14,31 @@ import PrimaryTitle from "@/utils/PrimaryTitle";
 
 
 const PublicSec = () => {
+
+    
+    const swiperRef = useRef(null);
+    const [slidesPerView, setSlidesPerView] = useState(6);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth < 600) {
+                setSlidesPerView(3);
+            } else {
+                setSlidesPerView(6);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+
+
 
     const datas = [
         {
@@ -67,16 +92,18 @@ const PublicSec = () => {
     ]
 
     return (
-        <div className='mt-[120px] mr-[315px]'>
+        <div className='  lg:mt-[120px] pt-[10px] lg:pt-[0px] lg:mr-[315px] mr-[10px]'>
 
             <div className="text-right">
-                <SubTitle>Public</SubTitle>
-                <PrimaryTitle className="text-[120px] font-poppins" >Reals & Shorts</PrimaryTitle>
+
+                <SubTitle className=" text-[30px] lg:text-[60px]">Public</SubTitle>
+
+                <PrimaryTitle className="text-[40px] lg:text-[120px] leading-[20px] lg:leading-[100px]" >Reals & Shorts</PrimaryTitle>
             </div>
 
 
             <Swiper
-                slidesPerView={6}
+                slidesPerView={slidesPerView}
                 spaceBetween={10}
                 loop={true}
                 pagination={{
@@ -87,6 +114,10 @@ const PublicSec = () => {
                 modules={[Pagination, Navigation]}
                 navigation={true}
                 className="myPublicSwipper mt-6"
+
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
             >
                 {
                     datas.map((data, i) => (

@@ -20,15 +20,13 @@ const Home = () => {
       <HeaderBottom />
       <BestHeadphone />
       <Feature />
-
-      {/* 
       <BestService />
       <Latest />
       <ParallaxBg />
       <Review />
       <PublicSec />
       <Blog />
-      <Footer /> */}
+      <Footer /> 
 
 
     </div>

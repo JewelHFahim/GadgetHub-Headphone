@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,6 +14,31 @@ import PrimaryTitle from "@/utils/PrimaryTitle";
 
 
 const Review = () => {
+
+
+    const swiperRef = useRef(null);
+    const [slidesPerView, setSlidesPerView] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth < 600) {
+                setSlidesPerView(1);
+            } else {
+                setSlidesPerView(3);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+
+
 
     const desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem dunt pellentesque. Fu fringilla,"
     const datas = [
@@ -45,15 +70,15 @@ const Review = () => {
 
 
     return (
-        <div className='pt-[120px] pb-[80px] bg-[#191919] px-[200px] relative'>
+        <div className=' py-[24px] lg:pt-[120px] bg-[#191919] px-[10px] lg:px-[200px] relative'>
 
             <div className="flex flex-col items-center">
-                <SubTitle>Public</SubTitle>
-                <PrimaryTitle className="text-[120px] font-poppins" >Review</PrimaryTitle>
+                <SubTitle className="text-[30px] lg:text-[60px] font-[800px]">Public</SubTitle>
+                <PrimaryTitle className="text-[50px] lg:text-[120px] leading-[20px] lg:leading-[100px]" >Review</PrimaryTitle>
             </div>
 
             <Swiper
-                slidesPerView={3}
+                slidesPerView={slidesPerView}
                 spaceBetween={80}
                 loop={true}
                 centeredSlides={true}
@@ -65,14 +90,23 @@ const Review = () => {
                 modules={[Pagination, Navigation]}
                 navigation={true}
                 className="myReviewSwipper"
+
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
             >
                 {
                     datas.map((data, i) => (
-                        <SwiperSlide key={i} className='w-[480px] h-[200px] border relative'>
+                        <SwiperSlide key={i}>
 
-                            <Image src={data.img} width={107} height={107} alt="" className='absolute top-[-60px] left-[185px]' />
+                            <div  className='w-[80%] h-[153px]  mx-auto lg:w-[460px] lg:h-[200px] border relative'> 
+                                <div className='absolute top-[-40px] lg:top-[-60px] left-[40%] lg:left-[185px] '>
+                                <div className="w-[71px] h-[71px] lg:w-[107px] lg:h-[107px] relative">
+                                    <Image src={data.img} fill alt="" />
+                                </div>
+                            </div>
 
-                            <div className='flex gap-1 text-[23px] justify-center mt-[60px] text-white'>
+                                <div className='flex gap-1 text-[17px] lg:text-[23px] justify-center mt-[40px] lg:mt-[60px] text-white'>
                                 <GrStar />
                                 <GrStar />
                                 <GrStar />
@@ -80,9 +114,12 @@ const Review = () => {
                                 <IoStarOutline />
                             </div>
 
-                            <p className='px-[89px] pb-[29px] pt-[10px] text-center text-[12px] font-poppins text-white text-opacity-[50%]'>
+                            <p className='px-[50px] lg:px-[89px] pb-[29px] pt-[10px] text-center text-[10px] lg:text-[12px] font-poppins text-white text-opacity-[50%]'>
                                 {data.desc}
                             </p>
+
+                            </div>
+
 
                         </SwiperSlide>
                     ))
@@ -90,8 +127,10 @@ const Review = () => {
 
             </Swiper>
 
-            <div className="w-[350px] h-full absolute left-0 top-0 bgGradient1" />
-            <div className="w-[320px] h-full absolute right-0 top-0 bg-red-60 bgGradient2" />
+            <div className="w-[350px] hidden lg:block h-full absolute left-0 top-0 bgGradient1" />
+            <div className="w-[320px] hidden lg:block h-full absolute right-0 top-0 bg-red-60 bgGradient2" />
+
+
         </div>
     )
 }

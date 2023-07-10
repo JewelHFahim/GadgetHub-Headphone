@@ -9,7 +9,7 @@
     white-space: nowrap;
 }
 
-.myBlogSwipper .swiper-button-prev,
+
 .myPublicSwipper .swiper-button-prev {
     bottom: 0px;
     left: 400px;
@@ -26,4 +26,24 @@
 
 .myPublicSwipper .swiper-button-next::after {
     background-image: url('/rightBtn.png');
+}
+
+
+@media only screen and (max-width: 600px) {
+    .myPublicSwipper {
+        padding-bottom: 60px;
+    }
+
+    .myPublicSwipper .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        left: 15%;
+        transform: translateX(-10%);
+    }
+
+    .myPublicSwipper .swiper-button-prev::before {
+        display: none;
+    }
+
+    .myPublicSwipper .swiper-button-next::after {
+        display: none;
+    }
 }

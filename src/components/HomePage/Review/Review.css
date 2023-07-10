@@ -42,3 +42,23 @@
     background: linear-gradient(90deg, #ffffff00 0%, #191919 20%);
     z-index: 99;
 }
+@media only screen and (max-width: 600px) {
+    .myReviewSwipper {
+        padding-bottom: 80px;
+        margin-top: 0px;
+        padding-top: 100px;
+    }
+
+    .myReviewSwipper .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        left: 15%;
+    }
+
+    .myReviewSwipper .swiper-button-prev::before {
+        display: none;
+    }
+
+    .myReviewSwipper .swiper-button-next::after {
+        display: none;
+    }
+
+}
