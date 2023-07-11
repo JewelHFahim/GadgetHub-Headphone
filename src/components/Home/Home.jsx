@@ -26,7 +26,6 @@ const Home = () => {
       <Review />
       <PublicSec />
       <Blog />
-      <Footer /> 
 
 
     </div>

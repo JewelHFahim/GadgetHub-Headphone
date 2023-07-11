@@ -7,7 +7,7 @@ import PrimaryTitle from '@/utils/PrimaryTitle';
 const Footer = () => {
 
     return (
-        <div className='mt-[30px] lg:mt-[57px] lg:mx-[315px] mx-[42px]'>
+        <div className='mt-[30px] lg:mt-[57px] lg:mx-[315px] mx-[42px] pb-[20px]'>
 
             <div className='flex flex-col justify-center  items-center lg:gap-[20px]'>
 
@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='mt-[60px] grid grid-cols-1 gap-[26px] lg:flex justify-between items-center text-center lg:text-left'>
+            <div className='mt-[40px] lg:mt-[60px] grid grid-cols-1 gap-[26px] lg:flex justify-between items-center text-center lg:text-left'>
 
                 <div className='flex lg:block flex-col items-center'>
                     <p className='text-[25px] font-[600] font-poppins text-white'> PAGES</p>
@@ -66,7 +66,7 @@ const Footer = () => {
 
             </div>
 
-            <div className='mt-[111px] text-center'>
+            <div className='mt-[40px] lg:mt-[111px] text-center'>
                 <div className='w-full h-[1px] bg-white bg-opacity-[50%]'></div>
                 <p className='mt-[10px] text-[20px] font-[500] font-poppins text-white text-opacity-[50%]'>@Copyright
                     <span className='text-white '>“MicroBuddy”</span>

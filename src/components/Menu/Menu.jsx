@@ -35,11 +35,11 @@ const Menu = ({ isOpen, toggleDrawer }) => {
             submenu: [
                 {
                     subttitle: 'Gaming',
-                    url: ""
+                    url: "/headset/gaming"
                 },
                 {
                     subttitle: 'MUSIC',
-                    url: ""
+                    url: "/headset/music"
                 },
             ]
         },
@@ -97,10 +97,9 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                                         {
                                             menu.submenu ?
 
-
                                                 < summary onClick={handleOpen} className='mb-4 flex justify-between items-center'>
 
-                                                 <a href={menu.url}>{menu.title}</a>  
+                                                    <a href={menu.url}>{menu.title}</a>
 
                                                     {
                                                         menu.submenu &&
@@ -110,9 +109,9 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                                                             }
                                                         </div>
                                                     }
-                                                    
+
                                                 </summary>
-                                
+
                                                 :
                                                 <summary className='mb-4 flex justify-between items-center'>
                                                     <Link href={menu.url}>  {menu.title}  </Link>
@@ -128,7 +127,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                                                         <>
                                                             {
                                                                 menu.submenu.map((sbm, i) => (
-                                                                    <a key={i} href="" className='grid grid-cols-1 text-[30px] lg:text-[50px] ml-[10%] my-3'>{sbm.subttitle}</a>
+                                                                    <a key={i} href={sbm.url} className='grid grid-cols-1 text-[30px] lg:text-[50px] ml-[10%] my-3'>{sbm.subttitle}</a>
                                                                 ))
                                                             }
                                                         </>

@@ -7,6 +7,7 @@ import NavDesk from '@/components/Navbar/NavDesk/NavDesk'
 import Menu from '@/components/Menu/Menu'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import React, { useContext } from 'react'
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
             <Menu isOpen={isOpen} toggleDrawer={toggleDrawer} />
 
             {children}
-
+            <Footer />
           </div>
         </AppContext>
       </body>
