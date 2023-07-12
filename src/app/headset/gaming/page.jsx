@@ -117,7 +117,7 @@ const Gaming = () => {
 
                 <div className='relative'>
                     <div className='w-full h-[130px] lg:h-[436px] relative'>
-                        <Image src="/headsetMusicbg2.png" alt='' fill />
+                        <Image src="/gamingBg1.png" alt='' fill />
                     </div>
                     <p className='text-[30px] lg:text-[90px] font-[900] font-poppins text-white absolute bottom-[10%] left-[15%] lg:left-[45%] uppercase' >Music System</p>
                 </div>

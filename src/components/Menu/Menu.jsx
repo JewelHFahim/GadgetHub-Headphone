@@ -27,7 +27,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
         },
         {
             title: "Blog",
-            url: ""
+            url: "/blog"
         },
         {
             title: "Headset",
