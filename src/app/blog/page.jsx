@@ -353,8 +353,8 @@ const Blog = () => {
                         </div>
                     </div>
 
-                     {/* 8th - horizontal*/}
-                     <div className=' flex justify-between 
+                    {/* 8th - horizontal*/}
+                    <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[547px]
                     w-[10vw] 
@@ -459,7 +459,21 @@ const Blog = () => {
 
             </div>
 
+            <div className='flex justify-around items-center'>
 
+                <div className='w-[51px] h-[41px] relative'>
+                    <Image src="/leftIcon.png" alt="" fill />
+                </div>
+
+                <div className='w-[189.88px] h-[27.49px] relative'>
+                    <Image src="/slideDots2.png" alt="" fill />
+                </div>
+
+                <div className='w-[51px] h-[41px] relative'>
+                    <Image src="/rightIcon.png" alt="" fill />
+                </div>
+
+            </div>
         </div>
     )
 }

@@ -13,11 +13,13 @@ import Link from 'next/link'
 
 const Menu = ({ isOpen, toggleDrawer }) => {
 
-    const [open, setOpen] = useState(false);
+    const [openMenuIndex, setOpenMenuIndex] = useState(null);
 
-    const handleOpen = () => {
-        setOpen(!open)
-    }
+    const handleMenuToggle = (index) => {
+        setOpenMenuIndex((prevIndex) => (prevIndex === index ? -1 : index));
+    };
+
+
 
     // Menus
     const menus = [
@@ -92,22 +94,21 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                         <li className="menu uppercase text-white text-[40px] lg:text-[60px] font-[700] font-inter flex flex-col gap-[40px] ">
                             {
                                 menus.map((menu, i) => (
-                                    <details key={i} open className='border-b border-white border-opacity-[5%] flex'>
+                                    <details key={i} className='border-b border-white border-opacity-[5%] flex'>
 
                                         {
                                             menu.submenu ?
 
-                                                < summary onClick={handleOpen} className='mb-4 flex justify-between items-center'>
+                                                < summary onClick={() => handleMenuToggle(i)} className='mb-4 flex justify-between items-center'>
 
                                                     <a href={menu.url}>{menu.title}</a>
 
                                                     {
-                                                        menu.submenu &&
-                                                        <div className='my-[-10px]' >
-                                                            {
-                                                                open ? <FiPlusCircle /> : <FaMinus />
-                                                            }
-                                                        </div>
+                                                        menu.submenu && (
+                                                            <div className='my-[-10px]'>
+                                                                {openMenuIndex === i ? <FaMinus /> : <FiPlusCircle />}
+                                                            </div>
+                                                        )
                                                     }
 
                                                 </summary>
@@ -119,7 +120,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                                         }
 
                                         {
-                                            menu.submenu &&
+                                            menu.submenu && openMenuIndex === i &&
 
                                             <ul>
                                                 <li>
