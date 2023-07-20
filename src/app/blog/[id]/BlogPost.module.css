@@ -1,0 +1,59 @@
+.commonCont {
+    padding: 0px 100px 0px 0px;
+    background-image: linear-gradient(to top, #191919 50%, #131313 50%);
+    background-size: 100% 100%;
+}
+
+.commonImgCont {
+    width: 100%;
+    height: 695px;
+}
+
+.commonImgCont .commonImg {
+    width: 100%;
+    height: 695px;
+    object-fit: content;
+}
+
+.headsetPTitle{
+    font-size: 120px;
+    line-height: 110px;
+    overflow: hidden;
+}
+
+.HeadsetSTitle{
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .commonCont {
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .commonImgCont {
+        height: 211px;
+    }
+    
+    .commonImgCont .commonImg {
+        width: 100%;
+        height: 211px;
+    }
+
+    .headsetPTitle{
+        font-size: 60px;
+        line-height: 50px;
+        margin-left: 10px;
+    }
+    .HeadsetSTitle{
+        font-size: 30px;
+        line-height: 30px;
+        margin-left: 10px;
+
+    }
+}

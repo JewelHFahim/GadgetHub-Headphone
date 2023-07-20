@@ -47,7 +47,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
         },
         {
             title: "About Us",
-            url: ""
+            url: "/about"
         },
         {
             title: "Contact Us",

@@ -1,6 +1,7 @@
 import CommonHeader from '@/utils/CommonHeader'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Blog = () => {
@@ -26,47 +27,33 @@ const Blog = () => {
                 <div className='grid items-center grid-cols-2 lg:grid-cols-3 gap-[20px] lg:gap-[100px]'>
 
                     {/* 1st */}
-                    <div className={blogContainerV}>
+                    <Link href="/blog/1">
+                        <div className={blogContainerV}>
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute left-[-63px] md:left-[-63px] lg:left-[-107px] bottom-[61px] md:bottom-[60px] lg:bottom-[104px] -rotate-90'>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
-                                left-[-63px] 
-                                md:left-[-63px] 
-                                lg:left-[-107px] 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap leading-[20px] md:leading-[24px] lg:leading-[40px] '>
+                                        Headphone
+                                    </h3>
 
-                                bottom-[61px] 
-                                md:bottom-[60px] 
-                                lg:bottom-[104px]
-                                -rotate-90'>
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700] leading-[12px] md:leading-[12px] lg:leading-[20px]'>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
-                                leading-[20px]
-                                md:leading-[24px]
-                                lg:leading-[40px]
-                                '>
-                                    Headphone
-                                </h3>
-
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
-                                leading-[12px]
-                                md:leading-[12px]
-                                lg:leading-[20px]
-                                '>
-                                    Headphone
-                                </h3>
+                            <div className=' w-[83%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
-
-                        <div className=' w-[83%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
+                    </Link>
 
                     {/* 2nd- horizontal */}
-                    <div className={blogContainerH}>
+                    <Link href="/blog/2">
+                        <div className={blogContainerH}>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -76,31 +63,33 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[84%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
-
-                        <div className=' w-[84%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
+                    </Link>
 
                     {/* 3rd */}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/3">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[554px]
                     w-[10vw] 
@@ -115,8 +104,8 @@ const Blog = () => {
 
                     relative'>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -126,31 +115,33 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[83%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
-
-                        <div className=' w-[83%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
+                    </Link>
 
                     {/* 4th - horizontal*/}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/4">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[547px]
                     w-[10vw] 
@@ -167,8 +158,8 @@ const Blog = () => {
                     
                     '>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -178,31 +169,34 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[84%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
+                    </Link>
 
-                        <div className=' w-[84%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
 
                     {/* 5th */}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/5">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[554px]
                     w-[10vw] 
@@ -217,8 +211,8 @@ const Blog = () => {
 
                     relative'>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -228,31 +222,34 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[83%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
+                    </Link>
 
-                        <div className=' w-[83%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
 
                     {/* 6th - horizontal*/}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/6">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[547px]
                     w-[10vw] 
@@ -269,8 +266,8 @@ const Blog = () => {
                     
                     '>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -280,31 +277,33 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[84%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
-
-                        <div className=' w-[84%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
+                    </Link>
 
                     {/* 7th */}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/7">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[554px]
                     w-[10vw] 
@@ -319,8 +318,8 @@ const Blog = () => {
 
                     relative'>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -330,31 +329,34 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[83%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
+                    </Link>
 
-                        <div className=' w-[83%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
 
                     {/* 8th - horizontal*/}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/8">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[547px]
                     w-[10vw] 
@@ -371,8 +373,8 @@ const Blog = () => {
                     
                     '>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -382,31 +384,34 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[84%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
+                    </Link>
 
-                        <div className=' w-[84%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
 
                     {/* 9th */}
-                    <div className=' flex justify-between 
+                    <Link href="/blog/9">
+                        <div className=' flex justify-between 
                     min-w-[200px] 
                     max-w-[554px]
                     w-[10vw] 
@@ -421,8 +426,8 @@ const Blog = () => {
 
                     relative'>
 
-                        <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
-                            <div className='text-white uppercase font-inter absolute
+                            <div className='w-[40px] md:w-[50px] lg:w-[66px]  h-full '>
+                                <div className='text-white uppercase font-inter absolute
                                 left-[-63px] 
                                 md:left-[-63px] 
                                 lg:left-[-107px] 
@@ -432,29 +437,29 @@ const Blog = () => {
                                 lg:bottom-[104px]
                                 -rotate-90'>
 
-                                <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
+                                    <h3 className='text-[1.56rem] lg:text-[2.68rem] font-[700] whitespace-nowrap 
                                 leading-[20px]
                                 md:leading-[24px]
                                 lg:leading-[40px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
 
-                                <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
+                                    <h3 className='text-[.93rem] lg:text-[1.56rem] font-[700]
                                 leading-[12px]
                                 md:leading-[12px]
                                 lg:leading-[20px]
                                 '>
-                                    Headphone
-                                </h3>
+                                        Headphone
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className=' w-[83%] h-[100%] relative'>
+                                <Image src="/gamingH1.png" alt='' fill />
                             </div>
                         </div>
-
-                        <div className=' w-[83%] h-[100%] relative'>
-                            <Image src="/gamingH1.png" alt='' fill />
-                        </div>
-                    </div>
-
+                    </Link>
                 </div>
 
             </div>
