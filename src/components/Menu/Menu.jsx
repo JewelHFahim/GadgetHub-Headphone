@@ -51,7 +51,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
         },
         {
             title: "Contact Us",
-            url: ""
+            url: "contact"
         },
     ]
 

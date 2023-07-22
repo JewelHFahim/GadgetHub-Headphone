@@ -6,6 +6,7 @@ import Latest from '@/components/HomePage/Latest/Latest'
 import SubTitle from '@/utils/Subtitle'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
+import Gallery from './Gallery'
 
 const About = () => {
 
@@ -121,7 +122,7 @@ const About = () => {
                     <h3 className=' text-[25px] md:text-[40px] lg:text-[90px] text-[#D9D9D9] font-[800] uppercase leading-[50px] lg:leading-[100px]'>WE BUILD YOUR DEMAND</h3>
 
                     <p className='text-[15px] text-white text-opacity-[50%] text-center'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
                         <span className='hidden md:hidden lg:block'>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text
                             ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard
@@ -157,6 +158,79 @@ const About = () => {
                     <LatestSlider datas={datas} />
                 </div>
 
+            </div>
+
+            {/* Headphone Daily Use */}
+            <div className='bg-bgSecondary pl-[50px] px-[20px] md:px-[60px] lg:px-[400px] pb-[40px] pt-[100px]'>
+
+                <div className='flex items-center gap-[20px] md:gap-[50px] lg:gap-[150px]'>
+
+                    <div className='w-[151px] h-[225px] md:w-[151px] md:h-[225px] lg:w-[375px] lg:h-[560px] border-2 border-white border-opacity-[50%] relative'>
+
+                        <div className='absolute left-[-30px] top-[-30px] md:left-[-20px] md:top-[-30px] lg:left-[-50px] lg:top-[-60px]'>
+                            <div className='w-[151px] h-[225px] md:w-[151px] md:h-[225px] lg:w-[375px] lg:h-[560px] relative'>
+                                <Image src="/HD1.png" alt="" fill />
+                            </div>
+                        </div>
+
+                        <div className='absolute right-[-105px] top-[-5px] md:right-[-103px] md:top-[30px] lg:right-[-93px] lg:top-[100px] flex gap-[8px] lg:gap-[12px] items-center rotate-[-90deg] w-[220px]'>
+                            <p className=' text-[8px] md:text-[10px] lg:text-[14px] font-[600] font-poppins text-white text-opacity-[50%]'>30 AUGUST 2023</p>
+                            <div className=' w-[30px] md:w-[50px]  lg:w-[78px] h-[2px] bg-white bg-opacity-[50%]'></div>
+                        </div>
+
+                        <button className='flex items-center gap-[10px] absolute bottom-0 left-0 md:bottom-[0px] md-left-[0px] lg:bottom-[10px] lg:left-[10px]'>
+                            <div className="w-[25px] h-[25px] lg:w-[44px] lg:h-[44px] relative">
+                                <Image src="/rightIcon.png" alt="" fill className='p-1 rounded-full bg-[#191919]' />
+                            </div>
+                            <p className='text-[12px] lg:text-[15px] font-poppins text-white'>View All</p>
+                        </button>
+
+                    </div>
+
+                    <div className='w-[200px] md:w-[350px] lg:w-1/2'>
+                        <h2 className='text-[20px] md:text-[25px] lg:text-[60px] font-[700] font-poppins text-white'>Headphone Daily Use As ...</h2>
+                        <p className='text-[10px] text-white text-opacity-[50%]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,Lorem Ipsum </p>
+                    </div>
+
+                </div>
+
+                <div className='flex items-center gap-[40px] md:gap-[50px] lg:gap-[150px]'>
+
+                    <div className='w-[200px] md:w-[350px] lg:w-1/2'>
+                        <h2 className='text-[20px] md:text-[25px] lg:text-[60px] font-[700] font-poppins text-white'>Headphone Daily Use As ...</h2>
+                        <p className='text-[10px] text-white text-opacity-[50%]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,Lorem Ipsum </p>
+                    </div>
+
+                    <div className='w-[151px] h-[225px] md:w-[151px] md:h-[225px] lg:w-[375px] lg:h-[560px] border-2 border-white border-opacity-[50%] relative'>
+
+                        <div className='absolute left-[-30px] top-[-30px] md:left-[-20px] md:top-[-30px] lg:left-[-50px] lg:top-[-60px]'>
+                            <div className='w-[151px] h-[225px] md:w-[151px] md:h-[225px] lg:w-[375px] lg:h-[560px] relative'>
+                                <Image src="/HD2.png" alt="" fill />
+                            </div>
+                        </div>
+
+                        <div className='absolute right-[-105px] top-[-5px] md:right-[-103px] md:top-[30px] lg:right-[-93px] lg:top-[100px] flex gap-[8px] lg:gap-[12px] items-center rotate-[-90deg] w-[220px]'>
+                            <p className=' text-[8px] md:text-[10px] lg:text-[14px] font-[600] font-poppins text-white text-opacity-[50%]'>30 AUGUST 2023</p>
+                            <div className=' w-[30px] md:w-[50px]  lg:w-[78px] h-[2px] bg-white bg-opacity-[50%]'></div>
+                        </div>
+
+                        <button className='flex items-center gap-[10px] absolute bottom-0 left-0 md:bottom-[0px] md-left-[0px] lg:bottom-[10px] lg:left-[10px]'>
+                            <div className="w-[25px] h-[25px] lg:w-[44px] lg:h-[44px] relative">
+                                <Image src="/rightIcon.png" alt="" fill className='p-1 rounded-full bg-[#191919]' />
+                            </div>
+                            <p className='text-[12px] lg:text-[15px] font-poppins text-white'>View All</p>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {/* Gallery */}
+            <div className='my-[100px] pb-[50px] bg-bgSecondary'>
+                <PrimaryTitle className="text-[80px] text-center mb-[40px]">Gallelry</PrimaryTitle>
+                <Gallery />
             </div>
 
         </div>
