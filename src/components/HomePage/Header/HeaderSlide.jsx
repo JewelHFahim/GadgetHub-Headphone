@@ -27,9 +27,8 @@ const HeaderSlide = () => {
   ]
 
 
-
   return (
-    <div className="">
+    <div>
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -43,6 +42,7 @@ const HeaderSlide = () => {
       //   delay: 3500,
       //   disableOnInteraction: false,
       // }}
+
       >
 
         {

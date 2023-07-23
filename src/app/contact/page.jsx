@@ -74,29 +74,49 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className=' md:hidden lg:hidden w-[230px] h-[700px] bg-white absolute right-0 top-0 z-[1] '>
-                <p className='text-[30px] font-[800]'>US</p>
 
-                <div className='mt-[400px]'>
+            <div className='md:hidden lg:hidden absolute right-0 top-0 z-[1]'>
+                <div className='w-[230px] h-[800px] bg-white relative'>
 
-                    <div className='flex flex-col justify-center items-center gap-[20px] lg:mx-[120px] text-center'>
-                        <BsFillBuildingFill className='text-[#646464] text-[32px]' />
-                        <p className='text-[19px] font-poppins text-[#000]'>House: 00, Road: 00, Block: 0, XYZ, Dhaka </p>
+                    <p className='text-[30px] font-[800]'>US</p>
+
+                    <div className='rotate-[-90deg] absolute right-[20px] top-[180px]'>
+                        <PrimaryTitle className="text-[70px] leading-[80px] ">Contact</PrimaryTitle>
                     </div>
 
-                    <div className='flex flex-col justify-center items-center gap-[20px] lg:mx-[120px] text-center mt-[40px]'>
-                        <HiMail className='text-[#646464] text-[42px]' />
-                        <p className='text-[19px] font-poppins text-[#000]'>musicbuddy@mail.com</p>
+                    <div className='mt-[400px]'>
+
+                        <div className='flex flex-col justify-center items-center gap-[10px] text-center'>
+                            <BsFillBuildingFill className='text-[#646464] text-[32px]' />
+                            <p className='text-[12px] font-poppins text-[#000]'>House: 00, Road: 00, Block: 0, XYZ, Dhaka </p>
+                        </div>
+
+                        <div className='flex flex-col justify-center items-center gap-[10px] text-center mt-[20px]'>
+                            <HiMail className='text-[#646464] text-[32px]' />
+                            <p className='text-[12px] font-poppins text-[#000]'>musicbuddy@mail.com</p>
+                        </div>
+
+                        <div className='flex flex-col justify-center items-center gap-[10px] lg:mx-[120px] text-center mt-[20px]'>
+                            <MdCall className='text-[#646464] text-[32px]' />
+                            <p className='text-[12px] font-poppins text-[#000]'>+00 000 000 000</p>
+                        </div>
+
+                        <div className='flex flex-col justify-center items-center mt-[10px]'>
+                            <div className='w-[54px] h-[54px] relative'>
+                                <Image src="/logoContact.svg" alt="" fill />
+                            </div>
+                            <PrimaryTitle className="text-[25px]">Music Buddy</PrimaryTitle>
+                        </div>
                     </div>
 
-                    <div className='flex flex-col justify-center items-center gap-[20px] lg:mx-[120px] text-center mt-[40px]'>
-                        <MdCall className='text-[#646464] text-[42px]' />
-                        <p className='text-[19px] font-poppins text-[#000]'>+00 000 000 000</p>
+                    <div className='rotate-[-90deg] absolute left-[-220px] bottom-[150px]'>
+                        <PrimaryTitle className="text-[70px] leading-[80px]">Contact</PrimaryTitle>
                     </div>
                 </div>
             </div>
 
-            <div className='w-[100vw] h-[1000px] relative pb-[20px] mt-[650px] md:mt-[0] lg:mt-[0]'>
+
+            <div className='w-[100vw] h-[500px] lg:h-[1000px] relative pb-[20px] mt-[755px]'>
                 <Image src="/map.png" alt="" fill />
             </div>
 

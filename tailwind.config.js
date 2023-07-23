@@ -18,6 +18,7 @@ module.exports = {
       colors: {
         'bgPrimary': '#131313',
         'bgSecondary': '#191919',
+        "bgOffWhite": "#EFEFEF"
       },
 
       backgroundImage: {

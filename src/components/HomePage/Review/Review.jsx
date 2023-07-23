@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,10 +11,12 @@ import { GrStar } from 'react-icons/gr';
 import { IoStarOutline } from 'react-icons/io5';
 import SubTitle from "@/utils/Subtitle";
 import PrimaryTitle from "@/utils/PrimaryTitle";
+import { ThemeContext } from "@/Context/AppContext";
 
 
 const Review = () => {
 
+    const { isDarkmode } = useContext(ThemeContext)
 
     const swiperRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(3);
@@ -70,10 +72,10 @@ const Review = () => {
 
 
     return (
-        <div className=' py-[24px] lg:pt-[120px] bg-[#191919] px-[10px] lg:px-[200px] relative'>
+        <div className={`py-[24px] lg:pt-[120px] px-[10px] lg:px-[200px] relative ${ isDarkmode ? "bg-bgSecondary" : " bg-bgOffWhite" }`}>
 
             <div className="flex flex-col items-center">
-                <SubTitle className="text-[30px] lg:text-[60px] font-[800px]">Public</SubTitle>
+                <SubTitle className={`text-[30px] lg:text-[60px] font-[800px] ${ isDarkmode ? "text-white" : " text-black" }`}>Public</SubTitle>
                 <PrimaryTitle className="text-[50px] lg:text-[120px] leading-[20px] lg:leading-[100px]" >Review</PrimaryTitle>
             </div>
 
@@ -99,14 +101,14 @@ const Review = () => {
                     datas.map((data, i) => (
                         <SwiperSlide key={i}>
 
-                            <div  className='w-[80%] h-[153px]  mx-auto lg:w-[460px] lg:h-[200px] border relative'> 
+                            <div  className={`w-[80%] h-[153px]  mx-auto lg:w-[460px] lg:h-[200px] border relative ${ isDarkmode ? "border" : "border border-black"}`}> 
                                 <div className='absolute top-[-40px] lg:top-[-60px] left-[40%] lg:left-[185px] '>
                                 <div className="w-[71px] h-[71px] lg:w-[107px] lg:h-[107px] relative">
                                     <Image src={data.img} fill alt="" />
                                 </div>
                             </div>
 
-                                <div className='flex gap-1 text-[17px] lg:text-[23px] justify-center mt-[40px] lg:mt-[60px] text-white'>
+                                <div className={`flex gap-1 text-[17px] lg:text-[23px] justify-center mt-[40px] lg:mt-[60px]  ${ isDarkmode ? "text-white" : "text-black"}`}>
                                 <GrStar />
                                 <GrStar />
                                 <GrStar />
@@ -114,21 +116,19 @@ const Review = () => {
                                 <IoStarOutline />
                             </div>
 
-                            <p className='px-[50px] lg:px-[89px] pb-[29px] pt-[10px] text-center text-[10px] lg:text-[12px] font-poppins text-white text-opacity-[50%]'>
+                            <p className={`px-[50px] lg:px-[89px] pb-[29px] pt-[10px] text-center text-[10px] lg:text-[12px] font-poppins  ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>
                                 {data.desc}
                             </p>
-
                             </div>
-
-
                         </SwiperSlide>
                     ))
                 }
 
             </Swiper>
 
-            <div className="w-[350px] hidden lg:block h-full absolute left-0 top-0 bgGradient1" />
-            <div className="w-[320px] hidden lg:block h-full absolute right-0 top-0 bg-red-60 bgGradient2" />
+            <div className={`w-[350px] hidden lg:block h-full absolute left-0 top-0 ${ isDarkmode ? "bgGradient1" : "bg-gradient-to-r from-bgOffWhite from-80% to-bgOffWhite to-20%" } z-[999]`} />
+
+            <div className={`w-[320px] hidden lg:block h-full absolute right-0 top-0 bg-red-60  ${ isDarkmode ? "bgGradient1" : "bg-gradient-to-l from-bgOffWhite from-20% to-bgOffWhite to-80%" } z-[999]`} />
 
 
         </div>

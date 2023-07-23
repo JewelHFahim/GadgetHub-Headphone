@@ -73,7 +73,7 @@ const BlogPost = () => {
 
             {/* Comment Section */}
             <div className='font-poppins mx-[20px] lg:mx-[300px]'>
-                <h1 className='text-[100px] text-white font-[700]'>Commnets</h1>
+                <h1 className='text-[35px] lg:text-[100px] text-white font-[700]'>Commnets</h1>
 
                 <div>
                     <div className='flex items-center gap-[10px]'>
