@@ -1,6 +1,12 @@
-.commonCont {
+.forDarkMode.commonCont {
     padding: 0px 100px 0px 0px;
     background-image: linear-gradient(to top, #191919 50%, #131313 50%);
+    background-size: 100% 100%;
+}
+
+.forLightMode.commonCont {
+    padding: 0px 100px 0px 0px;
+    background-image: linear-gradient(to top, #EFEFEF 50%, white 50%);
     background-size: 100% 100%;
 }
 
@@ -25,7 +31,6 @@
     font-size: 60px;
     font-weight: 800;
     text-transform: uppercase;
-    color: white;
     line-height: 40px;
 }
 

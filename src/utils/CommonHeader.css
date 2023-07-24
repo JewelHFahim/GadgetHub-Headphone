@@ -1,6 +1,12 @@
-.commonCont {
+.commonContDark.commonCont {
     padding: 0px 100px;
     background-image: linear-gradient(to top, #191919 50%, #131313 50%);
+    background-size: 100% 100%;
+}
+
+.commonContLight.commonCont {
+    padding: 0px 100px;
+    background-image: linear-gradient(to top, #EFEFEF 50%, #ffffff 50%);
     background-size: 100% 100%;
 }
 
@@ -15,13 +21,13 @@
     object-fit: content;
 }
 
-.headsetPTitle{
+.headsetPTitle {
     font-size: 120px;
     line-height: 110px;
     overflow: hidden;
 }
 
-.HeadsetSTitle{
+.HeadsetSTitle {
     font-size: 60px;
     font-weight: 800;
     text-transform: uppercase;
@@ -31,7 +37,11 @@
 
 @media only screen and (max-width: 600px) {
 
-    .commonCont {
+    .commonContDark.commonCont {
+        padding: 0px;
+    }
+
+    .commonContLight.commonCont {
         margin-top: 10px;
         padding: 0px;
     }
@@ -39,18 +49,19 @@
     .commonImgCont {
         height: 211px;
     }
-    
+
     .commonImgCont .commonImg {
         width: 100%;
         height: 211px;
     }
 
-    .headsetPTitle{
+    .headsetPTitle {
         font-size: 60px;
         line-height: 50px;
         margin-left: 10px;
     }
-    .HeadsetSTitle{
+
+    .HeadsetSTitle {
         font-size: 30px;
         line-height: 30px;
         margin-left: 10px;

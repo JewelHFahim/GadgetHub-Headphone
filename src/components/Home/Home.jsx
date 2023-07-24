@@ -23,11 +23,8 @@ const Home = () => {
 
       <HeaderSlider />
       
-
-
       <HeaderBottom />
 
-      
       <BestHeadphone />
       
       <Feature />
@@ -44,7 +41,7 @@ const Home = () => {
 
       <Blog />
 
-      
+
     </div>
   )
 }

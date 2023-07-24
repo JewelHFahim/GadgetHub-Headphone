@@ -1,5 +1,7 @@
+"use client"
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from "./about.module.css"
 import FeatureSlider from '@/components/HomePage/Feature/FeatureSlider'
 import Latest from '@/components/HomePage/Latest/Latest'
@@ -7,8 +9,11 @@ import SubTitle from '@/utils/Subtitle'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
 import Gallery from './Gallery'
+import { ThemeContext } from '@/Context/AppContext'
 
 const About = () => {
+
+    const { isDarkmode } = useContext(ThemeContext)
 
     const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,"
 
@@ -52,22 +57,22 @@ const About = () => {
         <div>
 
             {/* Header */}
-            <div className={styles.commonCont}>
+            <div className={` ${styles.commonCont} ${ isDarkmode ? styles.forDarkMode : styles.forLightMode} `}>
                 <div className={styles.commonImgCont}>
                     <Image src="/blogPost.png" alt='' width={1715} height={700} className={styles.commonImg} />
                 </div>
                 <div className=' mx-[10px] lg:mx-[100px] '>
-                    <h1 className='text-[25px] lg:text-[80px] font-[600] lg:leading-[120px] uppercase text-white'>About Us</h1>
+                    <h1 className={`text-[25px] lg:text-[80px] font-[600] lg:leading-[120px] uppercase ${ isDarkmode ? "text-white" : "text-black"}`}>About Us</h1>
                 </div>
             </div>
 
             {/* two display image */}
-            <div className='flex justify-center gap-[20px] md:gap-[50px] lg:gap-[100px] mt-[25px] md:mt-[45px] lg:mt-[70px] mx-[10pz]'>
+            <div className={`flex justify-center gap-[20px] md:gap-[50px] lg:gap-[100px] pt-[25px] md:pt-[45px] lg:pt-[70px] mx-[10pz] ${isDarkmode ? "bg-bgPrimary" : ""}`}>
 
                 <div className='md:w-[296px] lg:w-[592px] mt-[80px] md:mt-[120px] lg:mt-[157px]'>
-                    <h2 className='text-[15px] md:text-[25px] lg:text-[80px] font-[700] font-inter text-white uppercase lg:leading-[90px]'>Headphone</h2>
-                    <p className='text-white text-opacity-[50%]'>Headphone</p>
-                    <p className='hidden md:hidden lg:block text-[15px] text-white text-opacity-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit doloribus adipisci pariatur deleniti, optio eum, sint eos temporibus ratione dolorem perferendis ipsam blanditiis? Harum.</p>
+                    <h2 className={`text-[15px] md:text-[25px] lg:text-[80px] font-[700] font-inter  uppercase lg:leading-[90px] ${ isDarkmode ? "text-white" : "text-black" }`}>Headphone</h2>
+                    <p className={` ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black" }`}>Headphone</p>
+                    <p className={`hidden md:hidden lg:block text-[15px] pb-[10px] ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black" }`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit doloribus adipisci pariatur deleniti, optio eum, sint eos temporibus ratione dolorem perferendis ipsam blanditiis? Harum.</p>
                     <div className='w-[172px] h-[218px] md:w-[296px] md:h-[333px] lg:w-[592px] lg:h-[666px] relative'>
                         <Image src="/aboutH1.png" alt="" fill />
                     </div>
@@ -78,15 +83,15 @@ const About = () => {
                         <Image src="/aboutH2.png" alt="" fill />
                     </div>
 
-                    <h2 className='text-[15px] md:text-[25px] lg:text-[80px] font-[700] font-inter text-white uppercase lg:leading-[90px]'>Headphone</h2>
-                    <p className='text-white text-opacity-[50%] lg:hidden'>Headphone</p>
-                    <p className='hidden md:hidden lg:block text-[15px] text-white text-opacity-[50%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit doloribus adipisci pariatur deleniti, optio eum, sint eos temporibus ratione dolorem perferendis ipsam blanditiis? Harum.</p>
+                    <h2 className={`text-[15px] md:text-[25px] lg:text-[80px] font-[700] font-inter  uppercase lg:leading-[90px] ${isDarkmode ? "text-white" : "text-black"}`}>Headphone</h2>
+                    <p className={`text-opacity-[50%] lg:hidden ${ isDarkmode ? "text-white" : "text-black" }`}>Headphone</p>
+                    <p className={`hidden md:hidden lg:block text-[15px] ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit doloribus adipisci pariatur deleniti, optio eum, sint eos temporibus ratione dolorem perferendis ipsam blanditiis? Harum.</p>
                 </div>
 
             </div>
 
             {/* Desktop Service Section */}
-            <div className='hidden  lg:grid lg:grid-cols-3 justify-center md:gap-[20px] lg:gap-[37px] md:px-[150px] lg:px-[300px] my-[85px] py-[85px] bg-bgSecondary'>
+            <div className='hidden  lg:grid lg:grid-cols-3 justify-center md:gap-[20px] lg:gap-[37px] md:px-[150px] lg:px-[300px] y-[85px] py-[85px] bg-bgSecondary'>
                 {
                     [1, , 2, 3, 4, 5, 6].map((item, i) => (
                         <div key={i} className='w-[409px] h-[458px] border border-white border-opacity-[50%] p-[35px]'>
@@ -137,7 +142,6 @@ const About = () => {
                 </div>
 
             </div>
-
 
             {/* Best Headphone */}
             <div className=' lg:ml-[315px] mt-[26px] lg:mt-[180px]'>
