@@ -19,8 +19,12 @@
     left: 150px;
 }
 
-.myReviewSwipper .swiper-button-prev::before {
+.forDarkMode.myReviewSwipper .swiper-button-prev::before {
     background-image: url('/leftBtn.png');
+}
+
+.forLightMode.myReviewSwipper .swiper-button-prev::before {
+    background-image: url('/leftBtnDark.png');
 }
 
 .myReviewSwipper .swiper-button-next {
@@ -29,8 +33,12 @@
 }
 
 
-.myReviewSwipper .swiper-button-next::after {
+.forDarkMode.myReviewSwipper .swiper-button-next::after {
     background-image: url('/rightBtn.png');
+}
+
+.forLightMode.myReviewSwipper .swiper-button-next::after {
+    background-image: url('/rightBtnDark.png');
 }
 
 .bgGradient1 {
@@ -42,6 +50,9 @@
     background: linear-gradient(90deg, #ffffff00 0%, #191919 20%);
     z-index: 99;
 }
+
+
+
 @media only screen and (max-width: 600px) {
     .myReviewSwipper {
         padding-bottom: 80px;

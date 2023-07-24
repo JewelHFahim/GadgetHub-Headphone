@@ -13,8 +13,12 @@
     left: 100px;
 }
 
-.myLatestSwipper .swiper-button-prev::before {
+.forDarkMode.myLatestSwipper .swiper-button-prev::before {
     background-image: url('/leftBtn.png');
+}
+
+.forLightMode.myLatestSwipper .swiper-button-prev::before {
+    background-image: url('/leftBtnDark.png');
 }
 
 .myLatestSwipper .swiper-button-next {
@@ -22,8 +26,12 @@
     right: 480px;
 }
 
-.myLatestSwipper .swiper-button-next::after {
+.forDarkMode.myLatestSwipper .swiper-button-next::after {
     background-image: url('/rightBtn.png');
+}
+
+.forLightMode.myLatestSwipper .swiper-button-next::after {
+    background-image: url('/rightBtnDark.png');
 }
 
 @media only screen and (max-width: 600px) {
@@ -31,9 +39,11 @@
         left: 10%;
         transform: translateX(-10%);
     }
+
     .myLatestSwipper .swiper-button-prev::before {
         display: none;
     }
+
     .myLatestSwipper .swiper-button-next::after {
         display: none;
     }

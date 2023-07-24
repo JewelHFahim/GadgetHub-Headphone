@@ -17,7 +17,7 @@ const Feature = () => {
         {
             title: ` GAMING HEADPHONE`,
             desc: description,
-            icon:  isDarkmode ?  "/GHeadphone.svg" : "/GHeadphoneDark.png",
+            icon: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png",
             position: 0
         },
         {
@@ -42,17 +42,22 @@ const Feature = () => {
 
                 <div>
 
-                    <SubTitle className={`text-[40px] lg:text-[60px] ${ isDarkmode ? "text-white" : "text-[#000]" }`}>OUR</SubTitle>
+                    <SubTitle className={`text-[40px] lg:text-[60px] ${isDarkmode ? "text-white" : "text-[#000]"}`}>OUR</SubTitle>
 
                     <PrimaryTitle className="text-[50px] lg:text-[120px] font-poppins leading-[40px] lg:leading-[100px]" >Feature</PrimaryTitle>
                 </div>
 
                 <button className='flex items-center gap-[10px] mt-2 lg:mt-0'>
                     <div className='relative w-[25px] h-[25px] lg:w-[44px] lg:h-[44px]'>
-                        <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full  ${ isDarkmode ? "bg-[#191919]" : "bg-bgOffWhite"}`} />
+
+                        {isDarkmode ?
+                            <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
+                            :
+                            <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-bgOffWhite`} />}
+
                     </div>
 
-                    <p className={`text-[10px]  lg:text-[15px] font-poppins  ${ isDarkmode ? "text-white" : "text-[#000]"}`}>View All Feature</p>
+                    <p className={`text-[10px]  lg:text-[15px] font-poppins  ${isDarkmode ? "text-white" : "text-[#000]"}`}>View All Feature</p>
                 </button>
             </div>
 
@@ -61,26 +66,36 @@ const Feature = () => {
 
                 {
                     datas.map((item, index) => (
-                        <div key={index} className={`w-[409px] h-[458px] border  border-opacity-[60%] p-[35px] ${ isDarkmode ? "border-white" : "border-black"}`}
+                        <div key={index} className={`w-[409px] h-[458px] border  border-opacity-[60%] p-[35px] ${isDarkmode ? "border-white" : "border-black"}`}
                             style={{ marginTop: `${item.position}px` }}
                         >
                             <div className='flex items-center gap-[32px]'>
                                 <Image src={item.icon} alt="" width={85} height={80} />
-                                <h2 className={`text-[30px] font-[800] font-poppins ${ isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
+                                <h2 className={`text-[30px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
-                            <p className={`mt-[58px] text-[12px] font-[300] ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>{item.desc}
+                            <p className={`mt-[58px] text-[12px] font-[300] ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>{item.desc}
                             </p>
 
                             <button className='flex items-center gap-[10px] mt-[53px]'>
-                                <Image src="/rightIcon.png" alt="" width={44} height={44} className={`p-2 rounded-full  ${ isDarkmode ? "bg-[#191919]" : "bg-bgOffWhite"}`} />
-                                <p className={`text-[15px] font-poppins  ${ isDarkmode ? "text-white" : "text-black" }`}>View All Feature</p>
+                                <div className='relative w-[25px] h-[25px] lg:w-[44px] lg:h-[44px]'>
+
+                                    {
+                                        isDarkmode ?
+                                            <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
+                                            :
+                                            <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-bgOffWhite`} />
+                                    }
+
+                                </div>
+
+                                <p className={`text-[10px]  lg:text-[15px] font-poppins  ${isDarkmode ? "text-white" : "text-[#000]"}`}>View All Feature</p>
                             </button>
                         </div>
                     ))
                 }
 
-            </div> 
-          
+            </div>
+
             <div className='lg:hidden'>
                 <FeatureSlider datas={datas} />
             </div>

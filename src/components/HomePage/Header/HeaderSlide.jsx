@@ -1,14 +1,17 @@
 "use client"
 
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./HeaderSlide.css"
+import { ThemeContext } from "@/Context/AppContext";
 
 const HeaderSlide = () => {
+
+  const { isDarkmode } = useContext(ThemeContext);
 
   const datas = [
     {
@@ -26,24 +29,18 @@ const HeaderSlide = () => {
 
   ]
 
-
   return (
     <div>
+
       <Swiper
         pagination={{
           dynamicBullets: true,
-          // type: "fraction",
         }}
         modules={[Pagination, Autoplay, Navigation]}
-        className="myHeaderSwiper"
+        className={`myHeaderSwiper ${ isDarkmode ? "forDarkMode" : "forLightMode"}`}
         navigation={true}
         loop={true}
-      // autoplay={{
-      //   delay: 3500,
-      //   disableOnInteraction: false,
-      // }}
-
-      >
+        >
 
         {
           datas.map((item, i) => (

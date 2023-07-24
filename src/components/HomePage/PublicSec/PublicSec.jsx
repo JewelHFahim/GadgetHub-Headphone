@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -8,14 +8,15 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./PublicSec.css"
-import Title from "@/utils/Subtitle";
 import SubTitle from "@/utils/Subtitle";
 import PrimaryTitle from "@/utils/PrimaryTitle";
+import { ThemeContext } from "@/Context/AppContext";
 
 
 const PublicSec = () => {
 
-    
+    const { isDarkmode } = useContext(ThemeContext)
+
     const swiperRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(6);
 
@@ -96,11 +97,10 @@ const PublicSec = () => {
 
             <div className="text-right">
 
-                <SubTitle className=" text-[30px] lg:text-[60px]">Public</SubTitle>
+                <SubTitle className={`text-[30px] lg:text-[60px] ${ isDarkmode ? "text-white" : "text-black" }`}>Public</SubTitle>
 
                 <PrimaryTitle className="text-[40px] lg:text-[120px] leading-[20px] lg:leading-[100px]" >Reals & Shorts</PrimaryTitle>
             </div>
-
 
             <Swiper
                 slidesPerView={slidesPerView}
@@ -113,7 +113,7 @@ const PublicSec = () => {
 
                 modules={[Pagination, Navigation]}
                 navigation={true}
-                className="myPublicSwipper mt-6"
+                className={`myPublicSwipper mt-6 ${ isDarkmode ? "forDarkMode" : "forLightMode"}`}
 
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;

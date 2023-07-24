@@ -7,11 +7,11 @@ const ToggleBtn = () => {
     const { isDarkmode, setIsDarkmode } = useContext(ThemeContext)
 
     const darkIcon = (
-        <BsFillMoonFill className='text-[30px]' />
+        <BsFillMoonFill className='text-[20px]' />
     );
 
     const lightIcon = (
-        <BsFillSunFill className='text-[30px]' />
+        <BsFillSunFill className='text-[20px]' />
     );
 
 

@@ -15,8 +15,12 @@
     left: 400px;
 }
 
-.myPublicSwipper .swiper-button-prev::before {
+.forDarkMode.myPublicSwipper .swiper-button-prev::before {
     background-image: url('/leftBtn.png');
+}
+
+.forLightMode.myPublicSwipper .swiper-button-prev::before {
+    background-image: url('/leftBtnDark.png');
 }
 
 .myPublicSwipper .swiper-button-next {
@@ -24,8 +28,13 @@
     right: 70px;
 }
 
-.myPublicSwipper .swiper-button-next::after {
+
+.forDarkMode.myPublicSwipper .swiper-button-next::after {
     background-image: url('/rightBtn.png');
+}
+
+.forLightMode.myPublicSwipper .swiper-button-next::after {
+    background-image: url('/rightBtnDark.png');
 }
 
 

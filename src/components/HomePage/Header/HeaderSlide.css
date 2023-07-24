@@ -15,7 +15,7 @@
 .myHeaderSwiper .swiper-pagination-horizontal {
     position: absolute;
     right: -140px !important;
-    color: white !important;
+    /* color: white !important; */
     bottom: 15px;
 }
 
@@ -40,6 +40,10 @@
     white-space: nowrap;
 }
 
+
+/******************* Previous and Next Btn ******************/
+
+/* for dark mode */
 .myHeaderSwiper .swiper-button-prev {
     bottom: 20px;
     left: 85px;
@@ -50,14 +54,21 @@
     font-weight: 500;
 }
 
+
 .myHeaderSwiper .swiper-button-prev::after {
     content: "Previous Slide";
 }
 
-.myHeaderSwiper .swiper-button-prev::before {
+.forDarkMode.myHeaderSwiper .swiper-button-prev::before {
     width: 51px;
     background-image: url('/leftIcon.png');
 }
+
+.forLightMode.myHeaderSwiper .swiper-button-prev::before {
+    width: 51px;
+    background-image: url('/leftIconDark.png');
+}
+
 
 .myHeaderSwiper .swiper-button-next {
     bottom: 20px;
@@ -66,14 +77,25 @@
     font-weight: 500;
 }
 
+
 .myHeaderSwiper .swiper-button-next::before {
     content: "Next Slide";
 }
 
-.myHeaderSwiper .swiper-button-next::after {
+
+.forDarkMode.myHeaderSwiper .swiper-button-next::after {
     width: 51px;
     background-image: url('/rightIcon.png');
 }
+.forLightMode.myHeaderSwiper .swiper-button-next::after {
+    width: 51px;
+    background-image: url('/rightIconDark.png');
+}
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     .imgConatainer {
@@ -81,8 +103,8 @@
     }
 
     .img {
-        height: 260px;
-        padding: 10px 0px 30px 0px;
+        height: 280px;
+        padding: 10px 0px 50px 0px;
     }
 
     .myHeaderSwiper .swiper-pagination-bullets-dynamic {
@@ -100,7 +122,7 @@
     }
 
     .myHeaderSwiper .swiper-button-prev {
-        bottom: -30px;
+        bottom: 0px;
         left: 20px;
     }
 
@@ -113,8 +135,8 @@
     }
 
     .myHeaderSwiper .swiper-button-next {
-        bottom: -30px;
-        right: -150px;
+        bottom: 0px;
+        right: -120px;
     }
 
     .myHeaderSwiper .swiper-button-next::before {

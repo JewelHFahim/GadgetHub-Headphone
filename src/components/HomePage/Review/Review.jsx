@@ -91,7 +91,7 @@ const Review = () => {
 
                 modules={[Pagination, Navigation]}
                 navigation={true}
-                className="myReviewSwipper"
+                className={`myReviewSwipper ${ isDarkmode ? "forDarkMode" : "forLightMode"}`}
 
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;

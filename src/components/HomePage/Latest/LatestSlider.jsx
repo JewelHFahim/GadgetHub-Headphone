@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -8,8 +8,11 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./LatestSlider.css"
+import { ThemeContext } from "@/Context/AppContext";
 
 const LatestSlider = ({ datas }) => {
+
+  const { isDarkmode } = useContext(ThemeContext)
 
   const swiperRef = useRef(null);
   const [slidesPerView, setSlidesPerView] = useState(3);
@@ -47,7 +50,7 @@ const LatestSlider = ({ datas }) => {
         }}
         modules={[Pagination, Navigation]}
         navigation={true}
-        className="myLatestSwipper"
+        className={`myLatestSwipper ${isDarkmode ? "forDarkMode" : "forLightMode"}`}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -61,15 +64,21 @@ const LatestSlider = ({ datas }) => {
               </div>
 
               <div className=" mt-[-110px] pl-[10px] lg:pl-[0px] lg:mt-2">
-                <p className='text-[20px] font-[500] font-poppins text-white '>{data.title}</p>
-                <h1 className='text-[20px] lg:text-[40px] font-[800] font-poppins text-white '>{data.model}</h1>
-                <button className='flex items-center gap-[10px]'>
 
-                  <div className="w-[25px] h-[25px] lg:w-[44px] lg:h-[44px] relative">
-                    <Image src="/rightIcon.png" alt="" fill className='p-1 rounded-full bg-[#191919]' />
+                <p className={`text-[20px] font-[500] font-poppins  ${ isDarkmode ? "text-white" : "text-black"}`}>{data.title}</p>
+
+                <h1 className={`text-[20px] lg:text-[40px] font-[800] font-poppins ${ isDarkmode ? "text-white" : "text-black"}`}>{data.model}</h1>
+                <button className='flex items-center gap-[10px]'>
+                  <div className='relative w-[25px] h-[25px] lg:w-[44px] lg:h-[44px]'>
+                    {
+                      isDarkmode ?
+                        <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
+                        :
+                        <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-white`} />
+                    }
                   </div>
 
-                  <p className='text-[12px] lg:text-[15px] font-poppins text-white'>View All</p>
+                  <p className={`text-[10px]  lg:text-[15px] font-poppins  ${isDarkmode ? "text-white" : "text-[#000]"}`}>View All</p>
                 </button>
               </div>
 

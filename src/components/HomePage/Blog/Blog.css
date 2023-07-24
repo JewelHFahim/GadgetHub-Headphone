@@ -14,8 +14,12 @@
 
 }
 
-.myBlogSwipper .swiper-button-prev::before {
+.forDarkMode.myBlogSwipper .swiper-button-prev::before {
     background-image: url('/leftBtn.png');
+}
+
+.forLightMode.myBlogSwipper .swiper-button-prev::before {
+    background-image: url('/leftBtnDark.png');
 }
 
 .myBlogSwipper .swiper-button-next {
@@ -23,8 +27,12 @@
     right: 100px;
 }
 
-.myBlogSwipper .swiper-button-next::after {
+.forDarkMode.myBlogSwipper .swiper-button-next::after {
     background-image: url('/rightBtn.png');
+}
+
+.forLightMode.myBlogSwipper .swiper-button-next::after {
+    background-image: url('/rightBtnDark.png');
 }
 
 @media only screen and (max-width: 600px) {

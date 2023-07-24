@@ -15,16 +15,19 @@ import { ThemeContext } from '@/Context/AppContext'
 
 const Home = () => {
 
-  const { isDarkmode } =  useContext(ThemeContext)
+  const { isDarkmode } = useContext(ThemeContext)
 
-  
+
   return (
-    <div className={` ${isDarkmode ? "bg-bgPrimary" : "bg-white" }  pb-10 mt-[-10px]`}>
+    <div className={` ${isDarkmode ? "bg-bgPrimary" : "bg-white"}  pb-10 mt-[-10px]`}>
 
       <HeaderSlider />
+      
+
 
       <HeaderBottom />
 
+      
       <BestHeadphone />
       
       <Feature />
@@ -38,7 +41,10 @@ const Home = () => {
       <Review />
       
       <PublicSec />
+
       <Blog />
+
+      
     </div>
   )
 }

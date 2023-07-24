@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -8,8 +8,11 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import "./FeatureSlider.css"
+import { ThemeContext } from "@/Context/AppContext";
 
 const FeatureSlider = ({ datas }) => {
+
+    const { isDarkmode } = useContext(ThemeContext)
 
     return (
         <>
@@ -25,23 +28,30 @@ const FeatureSlider = ({ datas }) => {
 
                 modules={[Pagination, Navigation]}
                 navigation={true}
-                className="myFeatureSlider mt-2"
+                className={`myFeatureSlider mt-2 ${isDarkmode ? "forDarkMode" : "forLightMode"} `}
             >
                 {
                     datas.map((item, index) => (
-                        <SwiperSlide key={index} className={`w-[409px] h-[458px] border border-white border-opacity-[60%] p-[30px]`}>
+                        <SwiperSlide key={index} className={`w-[409px] h-[458px] border p-[30px] ${isDarkmode ? "border-white border-opacity-[50%]" : "border-black"}`}>
 
                             <div className='flex items-center gap-[32px]'>
                                 <Image src={item.icon} alt="" width={85} height={80} />
-                                <h2 className='text-[25px] font-[800] font-poppins text-white'>{item.title}</h2>
+                                <h2 className={`text-[25px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
-                            
-                            <p className='mt-[58px] text-center text-[10px] font-[300] text-white text-opacity-[50%]'>{item.desc}
+
+                            <p className={`mt-[58px] text-center text-[10px] font-[300] ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>{item.desc}
                             </p>
 
                             <button className='flex items-center gap-[10px] mt-[40px]'>
-                                <Image src="/rightIcon.png" alt="" width={36} height={36} className='p-2 rounded-full bg-[#191919]' />
-                                <p className='text-[12px] font-poppins text-white uppercase'>Learn More</p>
+
+                                {
+                                    isDarkmode ?
+                                        <Image src="/rightIcon.png" alt="" width={36} height={36} className='p-2 rounded-full bg-bgSecondary' />
+                                        :
+                                        <Image src="/rightIconDark.png" alt="" width={36} height={36} className='p-2 rounded-full bg-bgOffWhite' />
+                                }
+
+                                <p className={`text-[12px] font-poppins uppercase ${isDarkmode ? "text-white" : "text-black"}`}>Learn More</p>
                             </button>
                         </SwiperSlide>
                     ))
