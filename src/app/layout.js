@@ -7,6 +7,8 @@ import NavDesk from '@/components/Navbar/NavDesk/NavDesk'
 import React from 'react'
 import Footer from '@/components/Footer/Footer'
 import MenuHelper from '@/components/Menu/MenuHelper'
+import ToggoleBtn from '@/components/ToggoleBtn/ToggoleBtn';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,12 +23,21 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AppContext>
-          <div>
+
+          <div className='relative'>
+
             <NavDesk />
+
             <MenuHelper />
+
+            <div className='absolute top-[20px] right-[100px] lg:right-2 lg:top-[220px] z-[99]'><ToggoleBtn /></div>
+
             {children}
+
             <Footer />
+
           </div>
+
         </AppContext>
       </body>
     </html>

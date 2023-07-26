@@ -2,7 +2,6 @@
 
 import "./CommonHeader.css"
 import Image from 'next/image'
-import PrimaryTitle from './PrimaryTitle'
 import { useContext } from "react"
 import { ThemeContext } from "@/Context/AppContext"
 

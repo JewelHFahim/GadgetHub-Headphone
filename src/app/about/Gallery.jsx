@@ -1,9 +1,15 @@
 "use client"
+import { ThemeContext } from '@/Context/AppContext';
 import Image from 'next/image';
+import { useContext } from 'react';
 
 const Gallery = () => {
+
+  const { isDarkmode } = useContext(ThemeContext)
+
   return (
     <>
+
       <style jsx>{`
         img {
           max-width: 100%;
@@ -74,72 +80,48 @@ const Gallery = () => {
         
         }
       `}</style>
-      <div className="mx-[20px] md:mx-[50px] lg:mx-[300px]">
+
+
+      <div className={`px-[20px] md:px-[50px] lg:px-[280px] py-[30px] ${isDarkmode ? "bg-bgPrimary" : "bg-bgOffWhite"} `}>
 
         <div className="grid-wrapper">
 
           <div className='tall'>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/headphoneInAir.png"
-                alt=""
-                fill
-              />
+              <Image src="/headphoneInAir.png" alt="" fill />
             </div>
           </div>
 
 
           <div className=''>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/gamingH1.png"
-                alt=""
-                fill
-              />
+              <Image src="/gamingH1.png" alt="" fill />
             </div>
           </div>
 
-          <div className=''>
+          <div>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/Blog5.png"
-                alt=""
-                fill
-              />
+              <Image src="/Blog5.png" alt="" fill />
             </div>
           </div>
 
           <div className='wide'>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/slideImg3.jpg"
-                alt=""
-                fill
-              />
+              <Image src="/slideImg3.jpg" alt="" fill />
             </div>
           </div>
 
           <div className='wide'>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/blogPost.png"
-                alt=""
-                fill
-              />
+              <Image src="/blogPost.png" alt="" fill />
             </div>
           </div>
 
-          <div className=''>
+          <div>
             <div className=" w-[350px] h-[300px] relative">
-              <Image
-                src="/Best1.png"
-                alt=""
-                fill
-              />
+              <Image src="/Best1.png" alt="" fill />
             </div>
           </div>
-
-
 
         </div>
 

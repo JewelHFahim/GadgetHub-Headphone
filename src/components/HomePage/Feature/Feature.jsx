@@ -53,7 +53,8 @@ const Feature = () => {
                         {isDarkmode ?
                             <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
                             :
-                            <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-bgOffWhite`} />}
+                            <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-bgOffWhite`} />
+                        }
 
                     </div>
 

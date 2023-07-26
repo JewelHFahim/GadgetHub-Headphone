@@ -244,7 +244,6 @@ const Blog = () => {
                         </div>
                     </Link>
 
-
                 </div>
 
             </div>

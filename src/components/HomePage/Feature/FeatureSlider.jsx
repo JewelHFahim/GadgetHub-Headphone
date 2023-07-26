@@ -39,8 +39,7 @@ const FeatureSlider = ({ datas }) => {
                                 <h2 className={`text-[25px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
 
-                            <p className={`mt-[58px] text-center text-[10px] font-[300] ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>{item.desc}
-                            </p>
+                            <p className={`mt-[58px] text-center text-[10px] font-[300] ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-[#000]"}`}>{item.desc} Hello </p>
 
                             <button className='flex items-center gap-[10px] mt-[40px]'>
 

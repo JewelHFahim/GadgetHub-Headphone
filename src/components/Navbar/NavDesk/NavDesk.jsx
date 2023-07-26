@@ -29,8 +29,6 @@ const NavDesk = () => {
         </Link>
       </div>
 
-      <ToggoleBtn />
-
     </div>
   )
 }

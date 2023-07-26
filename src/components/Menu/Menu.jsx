@@ -1,3 +1,6 @@
+"use client"
+
+
 import { ThemeContext } from '@/Context/AppContext'
 import React, { useContext, useState } from 'react'
 import Drawer from 'react-modern-drawer'
@@ -12,6 +15,10 @@ import Link from 'next/link'
 
 
 const Menu = ({ isOpen, toggleDrawer }) => {
+
+
+
+    const { isDarkmode } = useContext(ThemeContext)
 
     const [openMenuIndex, setOpenMenuIndex] = useState(null);
 
@@ -65,13 +72,17 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                 size="100vh"
                 className="w-screen"
 
-                style={{ backgroundColor: "#131313" }}
             >
-                <div className=' lg:flex w-[102vw] lg:pl-[95px] h-full relative'>
+                <div className={`lg:flex w-[102vw] lg:pl-[95px] h-full relative ${ isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
 
                     {/* Menu Close Button */}
                     <button onClick={toggleDrawer} className='absolute right-[20px] top-[10px]  lg:right-[80px] lg:top-[70px]'>
-                        <CgCloseO className='text-[40px] text-white' />
+                        {
+                            isDarkmode ?
+                                <CgCloseO className='text-[40px] text-white' />
+                                :
+                                <CgCloseO className='text-[40px] text-black' />
+                        }
                     </button>
 
                     {/* Left Side Menu COntent */}
@@ -91,10 +102,10 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                         </div>
 
                         {/* Menu and Submenu */}
-                        <li className="menu uppercase text-white text-[40px] lg:text-[60px] font-[700] font-inter flex flex-col gap-[40px] ">
+                        <li className={`menu uppercase  text-[40px] lg:text-[60px] font-[700] font-inter flex flex-col gap-[40px] ${ isDarkmode ? "text-white" : "text-bgPrimary" }`}>
                             {
                                 menus.map((menu, i) => (
-                                    <details key={i} className='border-b border-white border-opacity-[5%] flex'>
+                                    <details key={i} className={`border-b  border-opacity-[5%] flex ${ isDarkmode ? "border-white" : "border-bgPrimary" }`}>
 
                                         {
                                             menu.submenu ?
@@ -144,24 +155,26 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                     </ul>
 
                     {/* Right Side Menu Content */}
-                    <div className='lg:w-[40%] flex flex-col pl-[25px] mt-[10px] py-[40px] lg:mt-0 lg:py-0 items-start lg:pl-[60px] bg-bgSecondary f-full'>
+                    <div className={`lg:w-[40%] flex flex-col pl-[25px] mt-[10px] py-[40px] lg:mt-0 lg:py-0 items-start lg:pl-[60px]  f-full ${ isDarkmode ? "bg-bgSecondary" : " bg-bgOffWhite"}`}>
 
                         {/* Descktop Searchbar */}
-                        <div className='hidden mt-[30%] w-[90%] h-[74px] lg:flex items-center border border-white border-opacity-[50%] rounded-[37px] px-[28px]'>
-                            <input type="text" placeholder='Search in Keyboard' className='w-full h-[74px] flex items-center rounded-[37px] text-[25px] font-inter bg-transparent focus:outline-none text-white placeholder:text-white placeholder:text-opacity-[50%]' />
-                            <BiSearchAlt className='text-[40px] text-white text-opacity-[50%]' />
+                        <div className={`hidden mt-[30%] w-[90%] h-[74px] lg:flex items-center border  rounded-[37px] px-[28px] ${ isDarkmode ? "border-white border-opacity-[50%]" : "border-bgPrimary"}`}>
+
+                            <input type="text" placeholder='Search in Keyboard' className={`w-full h-[74px] flex items-center rounded-[37px] text-[25px] font-inter bg-transparent focus:outline-none  ${ isDarkmode ? "text-white placeholder:text-white placeholder:text-opacity-[50%]" : "text-bgPrimary placeholder:text-bgPrimary placeholder:text-opacity-[50%]"}`} />
+
+                            <BiSearchAlt className={`text-[40px] ${isDarkmode ? "text-white text-opacity-[50%]" : "text-bgPrimary text-opacity-[50%]"}`} />
                         </div>
 
                         {/* Email Section */}
                         <div className='lg:mt-[30%]'>
-                            <h2 className='text-[24px] lg:text-[40px] text-white font-inter'>Want to talk with us?</h2>
-                            <span className='text-[30px] lg:text-[70px] font-[600] text-white leading-[20px] lg:leading-[60px] font-jaldi'>info@company.com</span>
+                            <h2 className={`text-[24px] lg:text-[40px]  font-inter ${isDarkmode ? "text-white" : "text-bgPrimary"}`}>Want to talk with us?</h2>
+                            <span className={`text-[30px] lg:text-[70px] font-[600]  leading-[20px] lg:leading-[60px] font-jaldi ${ isDarkmode ? "text-white" : "text-bgPrimary"}`}>info@company.com</span>
                         </div>
 
                         {/* Social Icons */}
                         <div className='mt-[34px] lg:mt-[16%]'>
-                            <h2 className='text-[20px] lg:text-[40px] text-white font-inter font-[700]'>FOLLOW US</h2>
-                            <div className='flex items-center gap-[50px] lg:gap-[30px] text-[22px] text-white'>
+                            <h2 className={`text-[20px] lg:text-[40px]  font-inter font-[700] ${ isDarkmode ? "text-white" : "text-bgPrimary"}`}>FOLLOW US</h2>
+                            <div className={`flex items-center gap-[50px] lg:gap-[30px] text-[22px] text-white ${ isDarkmode ? "text-white" : "text-bgPrimary"}`}>
                                 <button><FaFacebookF /></button>
                                 <button><FaInstagram /></button>
                                 <button><FaTwitter /></button>
@@ -170,6 +183,7 @@ const Menu = ({ isOpen, toggleDrawer }) => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </Drawer >
         </>
