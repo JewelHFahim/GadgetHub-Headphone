@@ -76,7 +76,7 @@ const Review = () => {
 
             <div className="flex flex-col items-center">
                 <SubTitle className={`text-[30px] lg:text-[60px] font-[800px] ${ isDarkmode ? "text-white" : " text-black" }`}>Public</SubTitle>
-                <PrimaryTitle className="text-[50px] lg:text-[120px] leading-[20px] lg:leading-[100px]" >Review</PrimaryTitle>
+                <PrimaryTitle className="text-[50px] lg:text-[130px] leading-[20px] lg:leading-[110px]" >Review</PrimaryTitle>
             </div>
 
             <Swiper
@@ -103,7 +103,7 @@ const Review = () => {
 
                             <div  className={`w-[80%] h-[153px]  mx-auto lg:w-[460px] lg:h-[200px] border relative ${ isDarkmode ? "border" : "border border-black"}`}> 
                                 <div className='absolute top-[-40px] lg:top-[-60px] left-[40%] lg:left-[185px] '>
-                                <div className="w-[71px] h-[71px] lg:w-[107px] lg:h-[107px] relative">
+                                <div className="w-[71px] h-[71px] lg:w-[100px] lg:h-[100px] relative">
                                     <Image src={data.img} fill alt="" />
                                 </div>
                             </div>

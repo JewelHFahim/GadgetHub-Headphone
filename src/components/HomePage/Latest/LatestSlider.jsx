@@ -60,7 +60,7 @@ const LatestSlider = ({ datas }) => {
             <SwiperSlide key={i} className="">
 
               <div className="">
-                <Image src={data.img} alt='' width={600} height={350} className="" />
+                <Image src={data.img} alt='' width={600} height={350} className="transform duration-300 hover:scale-[1.02]" />
               </div>
 
               <div className=" mt-[-110px] pl-[10px] lg:pl-[0px] lg:mt-2">

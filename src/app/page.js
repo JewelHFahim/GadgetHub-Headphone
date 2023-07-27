@@ -1,12 +1,11 @@
 "use client"
-
-import Home from '@/components/Home/Home'
+import Home from '@/components/Home/Home';
 
 const Page = () => {
 
   return (
-    <div className='relative overflow-hidden'>
-      <Home />
+    <div className='overflow-hidden'>
+      <Home/>
     </div>
   )
 }

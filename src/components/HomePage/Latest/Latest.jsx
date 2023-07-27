@@ -52,7 +52,7 @@ const Latest = () => {
                 <div>
                     <SubTitle className={`text-[30px] lg:text-[60px] ${ isDarkmode ? "text-white" : "text-black" }`}> LATEST </SubTitle>
 
-                    <PrimaryTitle className="text-[60px] mt-[-30px] lg:mt-[0px] lg:text-[120px] font-poppins lg:leading-[100px]"> HEADSET </PrimaryTitle>
+                    <PrimaryTitle className="text-[60px] mt-[-30px] lg:mt-[0px] lg:text-[120px] font-poppins lg:leading-[100px] ml-[-4px]"> HEADSET </PrimaryTitle>
                 </div>
 
                 <button className='hidden lg:flex items-center gap-[10px]'>

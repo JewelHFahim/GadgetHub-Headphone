@@ -6,6 +6,7 @@ export const ThemeContext = createContext();
 
 const AppContext = ({ children }) => {
 
+
     const [isDarkmode, setIsDarkmode] = useState(true);
 
     const handleToggole = () => {

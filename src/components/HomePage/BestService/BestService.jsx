@@ -38,7 +38,7 @@ const BestService = () => {
 
                                         {
                                             isDarkmode ?
-                                                <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
+                                                <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-bgPrimary`} />
                                                 :
                                                 <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-white`} />
                                         }

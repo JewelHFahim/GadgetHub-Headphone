@@ -13,10 +13,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import Link from 'next/link'
 
-
-const Menu = ({ isOpen, toggleDrawer }) => {
-
-
+const Menu = ({ isOpen, toggleDrawer  }) => {
 
     const { isDarkmode } = useContext(ThemeContext)
 
@@ -24,8 +21,8 @@ const Menu = ({ isOpen, toggleDrawer }) => {
 
     const handleMenuToggle = (index) => {
         setOpenMenuIndex((prevIndex) => (prevIndex === index ? -1 : index));
+        toggleDrawer();
     };
-
 
 
     // Menus
@@ -190,4 +187,5 @@ const Menu = ({ isOpen, toggleDrawer }) => {
     )
 }
 
-export default Menu
+
+export default Menu;

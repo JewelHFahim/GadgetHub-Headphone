@@ -44,7 +44,8 @@ const Feature = () => {
 
                     <SubTitle className={`text-[40px] lg:text-[60px] ${isDarkmode ? "text-white" : "text-[#000]"}`}>OUR</SubTitle>
 
-                    <PrimaryTitle className="text-[50px] lg:text-[120px] font-poppins leading-[40px] lg:leading-[100px]" >Feature</PrimaryTitle>
+                    <PrimaryTitle className="text-[50px] lg:text-[120px] font-poppins leading-[40px] lg:leading-[100px] ml-[-4px]" >Feature</PrimaryTitle>
+
                 </div>
 
                 <button className='flex items-center gap-[10px] mt-2 lg:mt-0'>
@@ -67,7 +68,7 @@ const Feature = () => {
 
                 {
                     datas.map((item, index) => (
-                        <div key={index} className={`w-[409px] h-[458px] border  border-opacity-[60%] p-[35px] ${isDarkmode ? "border-white" : "border-black"}`}
+                        <div key={index} className={`w-[409px] h-[458px] border  border-opacity-[60%] p-[35px] ${isDarkmode ? "border-white" : "border-black"} transform duration-300 hover:scale-[1.03]`}
                             style={{ marginTop: `${item.position}px` }}
                         >
                             <div className='flex items-center gap-[32px]'>

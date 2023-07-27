@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React, { useContext } from 'react'
 import styles from "./about.module.css"
 import FeatureSlider from '@/components/HomePage/Feature/FeatureSlider'
-import Latest from '@/components/HomePage/Latest/Latest'
 import SubTitle from '@/utils/Subtitle'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
@@ -13,48 +12,77 @@ import { ThemeContext } from '@/Context/AppContext'
 
 const About = () => {
 
+
+
     const { isDarkmode } = useContext(ThemeContext)
 
     const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,"
 
 
 
+    const services = [
+        {
+            title: 'Gaming Headphone',
+            img: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png",
+            desc: description
+        },
+        {
+            title: 'Waranty Service',
+            img: isDarkmode ? "/WService.svg" : "/WServiceDark.png",
+            desc: description
+        },
+        {
+            title: '24Hour Service',
+            img: isDarkmode ? "/SService.svg" : "/SServiceDark.png",
+            desc: description
+        },
+        {
+            title: 'Gaming Headphone',
+            img: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png",
+            desc: description
+        },
+        {
+            title: 'Waranty Service',
+            img: isDarkmode ? "/WService.svg" : "/WServiceDark.png",
+            desc: description
+        },
+        {
+            title: '24Hour Service',
+            img: isDarkmode ? "/SService.svg" : "/SServiceDark.png",
+            desc: description
+        },
+    ]
+
     const datas = [
         {
             title: 'Gaming',
             model: 'HEADSET HG250',
-            img: "/LatestHP1.png",
-            desc: description
+            img: "/LatestHP1.png"
         },
         {
             title: 'Music',
             model: 'HEADPHONE  H60 ',
-            img: "/LatestHP2.png",
-            desc: description
+            img: "/LatestHP2.png"
         },
         {
             title: 'Gaming',
             model: 'HEADSET Hk250',
-            img: "/LatestHP1.png",
-            desc: description
+            img: "/LatestHP1.png"
         },
         {
             title: 'Gaming',
             model: 'HEADSET HG250',
-            img: "/LatestHP1.png",
-            desc: description
+            img: "/LatestHP1.png"
         },
         {
             title: 'Music',
             model: 'HEADPHONE  H60 ',
-            img: "/LatestHP2.png",
-            desc: description
+            img: "/LatestHP2.png"
         },
         {
             title: 'Gaming',
             model: 'HEADSET Hk250',
-            img: "/LatestHP1.png",
-            desc: description
+            img: "/LatestHP1.png"
         },
     ]
 
@@ -99,21 +127,15 @@ const About = () => {
             {/* Desktop Service Section */}
             <div className={`hidden mt-[10px] lg:grid lg:grid-cols-3 justify-center md:gap-[20px] lg:gap-[37px] md:px-[150px] lg:px-[300px] y-[85px] py-[85px]  ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
                 {
-                    [1, , 2, 3, 4, 5, 6].map((item, i) => (
+                    services.map((item, i) => (
                         <div key={i} className={`w-[409px] h-[458px] border p-[35px] ${isDarkmode ? "border-white border-opacity-[50%]" : "border-black"}`}>
                             <div className='flex items-center gap-[32px]'>
+                                <Image src={item.img} alt="" width={85} height={80} />
 
-                                {isDarkmode ?
-                                    <Image src="/GHeadphone.svg" alt="" width={85} height={80} />
-                                    :
-                                    <Image src="/GHeadphoneDark.png" alt="" width={85} height={80} />
-                                }
-
-                                <h2 className={`text-[30px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>Gaming Headphone</h2>
+                                <h2 className={`text-[30px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
                             <p className={`mt-[58px] text-[12px] font-[300]  ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor
-                                sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus odio nec  Lorem ipsum dolor sit amet, cdipiscing elit. Sed cursus odio nec tincidunt cidunt pellentesque. Fu fringilla,
+                                {item.desc}
                             </p>
 
                             <button className='flex items-center gap-[10px] mt-[53px]'>
@@ -121,7 +143,7 @@ const About = () => {
 
                                     {
                                         isDarkmode ?
-                                            <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-[#191919]`} />
+                                            <Image src="/rightIcon.png" fill={true} alt='' className={`p-2 rounded-full bg-bgPrimary`} />
                                             :
                                             <Image src="/rightIconDark.png" fill={true} alt='' className={`p-2 rounded-full bg-white`} />
                                     }
@@ -277,7 +299,7 @@ const About = () => {
             </div>
 
             {/* Gallery */}
-            <div className={` ${ isDarkmode ? "bg-bgSecondary" : "bg-white" }`}>
+            <div className={` ${isDarkmode ? "bg-bgSecondary" : "bg-white"}`}>
                 <PrimaryTitle className="text-[80px] text-center mb-[40px]">Gallelry</PrimaryTitle>
                 <Gallery />
             </div>

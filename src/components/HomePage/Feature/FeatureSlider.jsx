@@ -35,7 +35,7 @@ const FeatureSlider = ({ datas }) => {
                         <SwiperSlide key={index} className={`w-[409px] h-[458px] border p-[30px] ${isDarkmode ? "border-white border-opacity-[50%]" : "border-black"}`}>
 
                             <div className='flex items-center gap-[32px]'>
-                                <Image src={item.icon} alt="" width={85} height={80} />
+                                <Image src={item.img} alt="" width={85} height={80} />
                                 <h2 className={`text-[25px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
 

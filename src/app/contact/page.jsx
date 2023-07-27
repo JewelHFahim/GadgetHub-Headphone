@@ -7,9 +7,13 @@ import React, { useContext } from 'react'
 import { BsFillBuildingFill } from 'react-icons/bs';
 import { HiMail } from 'react-icons/hi';
 import { MdCall } from 'react-icons/md';
+import { usePathname } from 'next/navigation'
+
 
 
 const Contact = () => {
+
+    const pathname = usePathname()
 
     const { isDarkmode } = useContext(ThemeContext)
 
@@ -20,7 +24,7 @@ const Contact = () => {
                 <PrimaryTitle className="text-[30px] lg:text-[100px] lg:text-center lg:mr-[350px]">Contact</PrimaryTitle>
             </div>
 
-            <div className={` lg:mr-[600px] md:pb-[200px] lg:pb-[400px] lg:mt-[-30px] absolute md:relative lg:relative z-[2] md-z[0] lg:z-[0] ${ isDarkmode ? "lg:bg-bgSecondary md:bg-bgSecondary" : " lg:bg-white md:bg-bgSecondary"} `}>
+            <div className={` lg:mr-[600px] md:pb-[200px] lg:pb-[400px] lg:mt-[-30px] absolute md:relative lg:relative z-[2] md-z[0] lg:z-[0] ${isDarkmode ? "lg:bg-bgSecondary md:bg-bgSecondary" : " lg:bg-white md:bg-bgSecondary"} `}>
 
                 <div className={` lg:pl-[250px] pb-[20px] lg:pb-4 pt-[40px] px-[20px] ${isDarkmode ? "bg-bgSecondary text-white" : "bg-white text-black"}`}>
 
@@ -31,8 +35,9 @@ const Contact = () => {
                     </div>
 
                     <br />
-
+                    
                     <textarea id="message" rows="4" class={`block p-2.5 w-[307px] lg:w-[730px] rounded-[5px] border bg-transparent focus:none ${isDarkmode ? "border-white border-opacity-[50%]" : "border-bgPrimary"}`} placeholder="Write your thoughts here...">
+
                     </textarea>
 
                     <div className=' w-[307px] md:w-[350px] lg:w-[730px] flex justify-end mt-[20px] '>
@@ -50,7 +55,7 @@ const Contact = () => {
 
                 </div>
 
-                <div className={`hidden md:block lg:block md:w-[330px] md:h-[] lg:w-[517px] lg:h-[695px] absolute md:right-[0px] lg:right-[-250px] top-[-40px] lg:top-[-80px] ${ isDarkmode ? "bg-white" : "bg-bgOffWhite border"}`}>
+                <div className={`hidden md:block lg:block md:w-[330px] md:h-[] lg:w-[517px] lg:h-[695px] absolute md:right-[0px] lg:right-[-250px] top-[-40px] lg:top-[-80px] ${isDarkmode ? "bg-white" : "bg-bgOffWhite border"}`}>
 
                     <p className='text-[30px] lg:text-[100px] font-[800] leading-[30px] lg:leading-[75px] text-[#000]'>US</p>
 

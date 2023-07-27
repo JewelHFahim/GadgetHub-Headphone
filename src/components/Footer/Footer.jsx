@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className={`pt-[30px] lg:pt-[57px] lg:px-[315px] px-[42px] pb-[20px] ${ isDarkmode ? "bg-bgPrimary" : ""}`}>
 
-            <div className='flex flex-col justify-center  items-center lg:gap-[20px]'>
+            <div className='flex flex-col justify-center  items-center lg:gap-[0px]'>
 
                 <div className='w-[64px] h-[64px] lg:w-[138px] lg:h-[138px] relative'>
                     {
@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
 
                 <div className="text-center">
-                    <PrimaryTitle className="text-[35px] lg:text-[120px] font-poppins" >Microbuddy</PrimaryTitle>
+                    <PrimaryTitle className="text-[35px] lg:text-[120px] font-poppins lg:leading-[120px]" >Music Buddy</PrimaryTitle>
                 </div>
 
                 <div className={`flex items-center gap-[30px] text-[22px]  ${ isDarkmode ? "text-white" : "text-black"}`}>
@@ -76,7 +76,7 @@ const Footer = () => {
             <div className='mt-[40px] lg:mt-[111px] text-center'>
                 <div className={`w-full h-[1px]  ${ isDarkmode ? "bg-white bg-opacity-[50%]" : "bg-black"}`}></div>
                 <p className={`mt-[10px] text-[20px] font-[500] font-poppins  ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>@Copyright
-                    <span className={`${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>“MicroBuddy”</span>
+                    <span className={`${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>MicroBuddy”</span>
                 </p>
             </div>
 
