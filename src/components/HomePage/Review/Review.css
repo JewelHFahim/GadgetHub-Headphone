@@ -4,6 +4,26 @@
     padding-top: 100px;
 }
 
+/* for line pagination start*/
+
+.forDarkMode.myReviewSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    width: 24px;
+    height: 4px !important;
+    border-radius: 0 !important;
+    margin: 0px 5px !important;
+    background-color: #fff;
+}
+
+.forLightMode.myReviewSwipper .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    width: 24px;
+    height: 4px !important;
+    border-radius: 0 !important;
+    margin: 0px 5px !important;
+    background-color: #000;
+}
+
+/* for line pagination end */
+
 .myReviewSwipper .swiper-slide-active {
     transform: scale(1.2);
 }
@@ -40,17 +60,6 @@
 .forLightMode.myReviewSwipper .swiper-button-next::after {
     background-image: url('/rightBtnDark.png');
 }
-
-.bgGradient1 {
-    background: linear-gradient(90deg, rgba(25, 25, 25, 1) 80%, rgba(255, 255, 255, 0) 100%);
-    z-index: 99;
-}
-
-.bgGradient2 {
-    background: linear-gradient(90deg, #ffffff00 0%, #191919 20%);
-    z-index: 99;
-}
-
 
 
 @media only screen and (max-width: 600px) {

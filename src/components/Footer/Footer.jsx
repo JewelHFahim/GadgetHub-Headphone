@@ -12,7 +12,7 @@ const Footer = () => {
     const threeLine = isDarkmode ? "h-[1px] bg-white" : "h-[1px] bg-black"
 
     return (
-        <div className={`pt-[30px] lg:pt-[57px] lg:px-[315px] px-[42px] pb-[20px] ${ isDarkmode ? "bg-bgPrimary" : ""}`}>
+        <div className={`pt-[30px] lg:pt-[57px] lg:px-[14vw] px-[42px] pb-[20px] ${ isDarkmode ? "bg-bgPrimary" : ""}`}>
 
             <div className='flex flex-col justify-center  items-center lg:gap-[0px]'>
 

@@ -41,18 +41,22 @@ const HeaderSlide = () => {
         navigation={true}
         loop={true}
         >
-
         {
           datas.map((item, i) => (
             <SwiperSlide key={i}>
               <div className='imgConatainer'>
-                <Image src={item.img} alt='' fill={true} className='img ' />
+
+                <div className={` w-[100%] lg:h-[95vh] relative `}>
+                <Image src={item.img} alt='' fill={true} className=" pt-0 p-[85px]" />
+                </div>
+
+                {/* <Image src={item.img} alt='' fill={true} className='img' /> */}
+
+
               </div>
             </SwiperSlide>
           ))
         }
-
-     
       </Swiper>
 
     </div>

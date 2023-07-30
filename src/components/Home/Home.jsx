@@ -17,15 +17,11 @@ const Home = () => {
 
   const { isDarkmode } = useContext(ThemeContext);
 
-
-
   return (
     <div className={` ${isDarkmode ? "bg-bgPrimary" : "bg-white"}  pb-10 mt-[-10px]`}>
 
-
-
-
       <HeaderSlider />
+
       <HeaderBottom />
 
       <BestHeadphone />
@@ -43,7 +39,6 @@ const Home = () => {
       <PublicSec />
 
       <Blog />
-
 
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import Menu from './Menu'
 import { ThemeContext } from '@/Context/AppContext'
@@ -8,7 +8,7 @@ const MenuHelper = () => {
 
     const { isDarkmode } = useContext(ThemeContext)
 
-    const [isOpen, setIsOpen] = React.useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState)

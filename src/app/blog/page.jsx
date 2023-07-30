@@ -2,6 +2,7 @@
 
 import { ThemeContext } from '@/Context/AppContext'
 import CommonHeader from '@/utils/CommonHeader'
+import FollowUs from '@/utils/FollowUs/FollowUs'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,6 +22,10 @@ const Blog = () => {
         <div>
 
             <CommonHeader />
+
+            <div className='hidden lg:block absolute left-[-170px] top-[650px]'>
+                <FollowUs />
+            </div>
 
             <div className={`text-left lg:py-2 lg:pl-[94px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
 

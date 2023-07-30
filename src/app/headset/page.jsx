@@ -19,9 +19,6 @@ const Headset = () => {
         <PrimaryTitle>Headset</PrimaryTitle>
       </div>
 
-
-
-
       <div className={`flex justify-center ${isDarkmode ? "bg-bgPrimary" : " bg-white"}`}>
         <div className='grid grid-cols-1 lg:grid-cols-3 justify-center items-center text-center lg:gap-[314px] py-[40px]'>
           <p className={`text-[33px] font-poppins font-[600] uppercase ${isDarkmode ? "text-white" : "text-bgPrimary"}`}>Wired</p>

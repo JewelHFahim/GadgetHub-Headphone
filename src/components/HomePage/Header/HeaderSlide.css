@@ -1,16 +1,3 @@
-.imgConatainer {
-    width: 100%;
-    height: 900px;
-    position: relative;
-    margin: 0px auto;
-}
-
-.img {
-    width: 100%;
-    height: 900px;
-    padding: 0px 85px 85px 85px;
-    object-fit: content;
-}
 
 .myHeaderSwiper .swiper-pagination-horizontal {
     position: absolute;
@@ -54,7 +41,6 @@
     font-weight: 500;
 }
 
-
 .myHeaderSwiper .swiper-button-prev::after {
     content: "Previous Slide";
 }
@@ -69,7 +55,6 @@
     background-image: url('/leftIconDark.png');
 }
 
-
 .myHeaderSwiper .swiper-button-next {
     bottom: 20px;
     right: 10px;
@@ -77,11 +62,9 @@
     font-weight: 500;
 }
 
-
 .myHeaderSwiper .swiper-button-next::before {
     content: "Next Slide";
 }
-
 
 .forDarkMode.myHeaderSwiper .swiper-button-next::after {
     width: 51px;
@@ -91,9 +74,6 @@
     width: 51px;
     background-image: url('/rightIconDark.png');
 }
-
-
-
 
 
 

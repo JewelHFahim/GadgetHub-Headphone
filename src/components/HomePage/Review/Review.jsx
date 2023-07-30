@@ -72,10 +72,10 @@ const Review = () => {
 
 
     return (
-        <div className={`py-[24px] lg:pt-[120px] px-[10px] lg:px-[200px] relative ${ isDarkmode ? "bg-bgSecondary" : " bg-bgOffWhite" }`}>
+        <div className={`py-[24px] lg:pt-[120px] px-[10px] lg:px-[10vw] relative ${isDarkmode ? "bg-bgSecondary" : " bg-bgOffWhite"}`}>
 
             <div className="flex flex-col items-center">
-                <SubTitle className={`text-[30px] lg:text-[60px] font-[800px] ${ isDarkmode ? "text-white" : " text-black" }`}>Public</SubTitle>
+                <SubTitle className={`text-[30px] lg:text-[60px] font-[800px] ${isDarkmode ? "text-white" : " text-black"}`}>Public</SubTitle>
                 <PrimaryTitle className="text-[50px] lg:text-[130px] leading-[20px] lg:leading-[110px]" >Review</PrimaryTitle>
             </div>
 
@@ -91,7 +91,7 @@ const Review = () => {
 
                 modules={[Pagination, Navigation]}
                 navigation={true}
-                className={`myReviewSwipper ${ isDarkmode ? "forDarkMode" : "forLightMode"}`}
+                className={`myReviewSwipper ${isDarkmode ? "forDarkMode" : "forLightMode"}`}
 
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
@@ -101,24 +101,24 @@ const Review = () => {
                     datas.map((data, i) => (
                         <SwiperSlide key={i}>
 
-                            <div  className={`w-[80%] h-[153px]  mx-auto lg:w-[460px] lg:h-[200px] border relative ${ isDarkmode ? "border" : "border border-black"}`}> 
+                            <div className={`w-[80%] h-[153px]  mx-auto lg:w-[24vw] lg:h-[200px] border relative ${isDarkmode ? "border" : "border border-black"}`}>
                                 <div className='absolute top-[-40px] lg:top-[-60px] left-[40%] lg:left-[185px] '>
-                                <div className="w-[71px] h-[71px] lg:w-[100px] lg:h-[100px] relative">
-                                    <Image src={data.img} fill alt="" />
+                                    <div className="w-[71px] h-[71px] lg:w-[100px] lg:h-[100px] relative">
+                                        <Image src={data.img} fill alt="" />
+                                    </div>
                                 </div>
-                            </div>
 
-                                <div className={`flex gap-1 text-[17px] lg:text-[23px] justify-center mt-[40px] lg:mt-[60px]  ${ isDarkmode ? "text-white" : "text-black"}`}>
-                                <GrStar />
-                                <GrStar />
-                                <GrStar />
-                                <GrStar />
-                                <IoStarOutline />
-                            </div>
+                                <div className={`flex gap-1 text-[17px] lg:text-[23px] justify-center mt-[40px] lg:mt-[60px]  ${isDarkmode ? "text-white" : "text-black"}`}>
+                                    <GrStar />
+                                    <GrStar />
+                                    <GrStar />
+                                    <GrStar />
+                                    <IoStarOutline />
+                                </div>
 
-                            <p className={`px-[50px] lg:px-[89px] pb-[29px] pt-[10px] text-center text-[10px] lg:text-[12px] font-poppins  ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>
-                                {data.desc}
-                            </p>
+                                <p className={`px-[50px] lg:px-[89px] pb-[29px] pt-[10px] text-center text-[10px] lg:text-[12px] font-poppins  ${isDarkmode ? "text-white text-opacity-[50%]" : "text-black"}`}>
+                                    {data.desc}
+                                </p>
                             </div>
                         </SwiperSlide>
                     ))
@@ -126,9 +126,9 @@ const Review = () => {
 
             </Swiper>
 
-            <div className={`w-[350px] hidden lg:block h-full absolute left-0 top-0 ${ isDarkmode ? "bgGradient1" : "bg-gradient-to-r from-bgOffWhite from-80% to-bgOffWhite to-20%" } z-[999]`} />
+            <div className={`w-[14vw] hidden lg:block h-full absolute left-0 top-0 ${isDarkmode ? "bg-gradient-to-r from-bgSecondary from-80%" : "bg-gradient-to-r from-bgOffWhite from-80%"} z-[999]`} />
 
-            <div className={`w-[320px] hidden lg:block h-full absolute right-0 top-0 bg-red-60  ${ isDarkmode ? "bgGradient1" : "bg-gradient-to-l from-bgOffWhite from-20% to-bgOffWhite to-80%" } z-[999]`} />
+            <div className={`w-[14vw] hidden lg:block h-full absolute right-0 top-0 bg-red-60  ${isDarkmode ? "bg-gradient-to-l from-bgSecondary from-80%" : "bg-gradient-to-l from-bgOffWhite from-80% "} z-[999]`} />
 
 
         </div>

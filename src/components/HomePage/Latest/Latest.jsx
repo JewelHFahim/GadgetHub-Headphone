@@ -46,7 +46,7 @@ const Latest = () => {
 
     return (
 
-        <div className={`lg:pl-[315px] pt-[26px] lg:py-[100px] lg:mt-[100px] ${isDarkmode ? "" : " bg-bgOffWhite"}`}>
+        <div className={`lg:pl-[16vw] pt-[26px] lg:py-[100px] lg:mt-[100px] ${isDarkmode ? "" : " bg-bgOffWhite"}`}>
 
             <div className='flex justify-between items-center lg:mr-[315px]'>
                 <div>

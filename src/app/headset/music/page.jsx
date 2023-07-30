@@ -2,6 +2,7 @@
 
 import { ThemeContext } from '@/Context/AppContext'
 import CommonHeader from '@/utils/CommonHeader'
+import FollowUs from '@/utils/FollowUs/FollowUs'
 import PrimaryTitle from '@/utils/PrimaryTitle'
 import Image from 'next/image'
 import React, { useContext } from 'react'
@@ -12,8 +13,12 @@ const Music = () => {
     const { isDarkmode } = useContext(ThemeContext)
 
     return (
-        <div>
+        <div className='relative'>
             <CommonHeader />
+
+            <div className='hidden lg:block absolute left-[-170px] top-[580px]'>
+                <FollowUs />
+            </div>
 
             <div className={`text-left lg:pt-2 lg:pl-[94px] pb-[5px] bg-[#191919] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
                 <p className={`ml-[10px] lg:ml-0 font-poppins text-[25px] lg:text-[60px] font-[800] uppercase leading-[40px] ${isDarkmode ? "text-white" : "text-bgPrimary"}`}>HEADSET</p>
@@ -22,17 +27,17 @@ const Music = () => {
                 </div>
             </div>
 
-            <div className={`relative flex items-center font-poppins pb-[40px] ${ isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
+            <div className={`relative flex items-center font-poppins pb-[40px] ${isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
 
                 <div className={`w-[239px] h-[239px] lg:w-[767px] lg:h-[767px] pl-[10px] absolute z-[1] lg:left-[150px] flex flex-col justify-center ${isDarkmode ? "bg-gradient-to-r from-bgSecondary from-30%" : "bg-gradient-to-r from-bgOffWhite from-30%"}`}>
 
-                    <h3 className={`text-[30px] lg:text-[60px]  font-[800] uppercase leading-[20px] lg:leading-[60px] ${ isDarkmode ? "text-[#D9D9D9]" : "text-bgPrimary" }`}>Headset</h3>
+                    <h3 className={`text-[30px] lg:text-[60px]  font-[800] uppercase leading-[20px] lg:leading-[60px] ${isDarkmode ? "text-[#D9D9D9]" : "text-bgPrimary"}`}>Headset</h3>
 
                     <PrimaryTitle className="text-[60px] lg:text-[180px] leading-[50px] lg:leading-[130px] ml-[-2px] lg:ml-[-6px]">Noice</PrimaryTitle>
 
-                    <p className={`text-[25px] lg:text-[89px] font-[800] uppercase leading-[20px] lg:leading-[80px] ${ isDarkmode ? "text-[#D9D9D9]" : "text-bgPrimary" }`}>Cancelling</p>
+                    <p className={`text-[25px] lg:text-[89px] font-[800] uppercase leading-[20px] lg:leading-[80px] ${isDarkmode ? "text-[#D9D9D9]" : "text-bgPrimary"}`}>Cancelling</p>
 
-                    <p className={`text-[10px] lg:text-[15px] w-2/3 ${ isDarkmode ? "text-white text-opacity-[50%]" : "text-bgPrimary" }`}>Noise cancelling headphones are designed to prevent you from hearing ambient noise. <span className='hidden lg:block'>They use tiny microphones within the earpieces to sense</span> </p>
+                    <p className={`text-[10px] lg:text-[15px] w-2/3 ${isDarkmode ? "text-white text-opacity-[50%]" : "text-bgPrimary"}`}>Noise cancelling headphones are designed to prevent you from hearing ambient noise. <span className='hidden lg:block'>They use tiny microphones within the earpieces to sense</span> </p>
 
                 </div>
 
@@ -41,7 +46,7 @@ const Music = () => {
                 </div>
             </div>
 
-            <div className={`py-[40px] lg:py-[75px] px-[10px] ${ isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
+            <div className={`py-[40px] lg:py-[75px] px-[10px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"} `}>
 
                 {/* 1st one */}
                 <div className='flex justify-center'>
@@ -51,9 +56,9 @@ const Music = () => {
 
                     <div className=' lg:pr-[40px] mt-[40px] lg:mt-[70px] h-1/2 ml-[-100px] lg:ml-[0px] z-[10] lg:z-[0]'>
 
-                        <div className={`p-[1px] ${ isDarkmode ? "bg-gradient-to-l from-[#D9D9D9] from-10%" : "bg-gradient-to-l from-bgSecondary from-10%"}`}>
+                        <div className={`p-[1px] ${isDarkmode ? "bg-gradient-to-l from-[#D9D9D9] from-10%" : "bg-gradient-to-l from-bgSecondary from-10%"}`}>
 
-                            <h2 className={`text-[30px] lg:text-[89px] font-[800] font-poppins uppercase lg:leading-[90px]  pr-[10px]  lg:pr-[30px] ${ isDarkmode ? "text-[#D9D9D9] bg-gradient-to-l from-[#191919] from-90%" : "text-bgPrimary bg-gradient-to-l from-bgOffWhite from-90%"}`}>Headphone</h2>
+                            <h2 className={`text-[30px] lg:text-[89px] font-[800] font-poppins uppercase lg:leading-[90px]  pr-[10px]  lg:pr-[30px] ${isDarkmode ? "text-[#D9D9D9] bg-gradient-to-l from-[#191919] from-90%" : "text-bgPrimary bg-gradient-to-l from-bgOffWhite from-90%"}`}>Headphone</h2>
                         </div>
 
                         <PrimaryTitle className={`text-[70px] lg:text-[180px] font-[900] leading-[80px] lg:leading-[150px] ml-[-40px] lg:ml-[-70px] absolute ${isDarkmode ? "text-white bg-bgPrimary" : "text-bgPrimary bg-bgOffWhite"}`}>In Air</PrimaryTitle>
@@ -66,11 +71,11 @@ const Music = () => {
                     <div className=' mt-[20px] lg:mt-[100px] h-1/2 mr-[-25px] lg:mr-[0px] z-[10]'>
                         <div className={` from-10% p-[1px] ${isDarkmode ? "bg-gradient-to-r from-[#D9D9D9]" : "bg-gradient-to-r from-bgSecondary"}`}>
 
-                            <h2 className={`text-[30px] lg:text-[89px]  font-[800] font-poppins uppercase lg:leading-[90px] pl-[10px] lg:pl-[30px] ${ isDarkmode ? "text-[#D9D9D9] bg-gradient-to-r from-[#191919] from-90%" : "text-bgPrimary bg-gradient-to-r from-bgOffWhite from-90%"}`}>In Build</h2>
+                            <h2 className={`text-[30px] lg:text-[89px]  font-[800] font-poppins uppercase lg:leading-[90px] pl-[10px] lg:pl-[30px] ${isDarkmode ? "text-[#D9D9D9] bg-gradient-to-r from-[#191919] from-90%" : "text-bgPrimary bg-gradient-to-r from-bgOffWhite from-90%"}`}>In Build</h2>
 
                         </div>
 
-                        <PrimaryTitle className={`text-[70px] lg:text-[180px] font-[900] leading-[80px] lg:leading-[150px] absolute z-[10] ml-[20px] lg:ml-[80px] ${ isDarkmode ? "text-white bg-bgPrimary" : "text-black bg-bgOffWhite "}`}>Apps</PrimaryTitle>
+                        <PrimaryTitle className={`text-[70px] lg:text-[180px] font-[900] leading-[80px] lg:leading-[150px] absolute z-[10] ml-[20px] lg:ml-[80px] ${isDarkmode ? "text-white bg-bgPrimary" : "text-black bg-bgOffWhite "}`}>Apps</PrimaryTitle>
                     </div>
 
                     <div className='w-[238px] h-[168px] lg:w-[607px] lg:h-[428px] relative'>

@@ -66,7 +66,7 @@ const Blog = () => {
     ]
 
     return (
-        <div className={`mt-[40px] lg:mt-[135px]  lg:h-[777px] px-[10px] lg:px-[300px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
+        <div className={`mt-[40px] lg:mt-[135px]  lg:h-[96vh] px-[10px] lg:px-[14vw] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
 
             <div className='pt-[10px] lg:pt-[66px] flex justify-between items-center '>
 
@@ -107,11 +107,11 @@ const Blog = () => {
             >
                 {
                     datas.map((item, i) => (
-                        <SwiperSlide key={i} className='hover:scale-[1.03] transform duration-300 m-2'>
+                        <SwiperSlide key={i} className='cursor-pointer'>
 
-                            <div className={`w-[290px] h-[274px] lg:w-[344px] lg:h-[324px] pl-[10px] lg:pl-[20px] pt-[10px] lg:pt-[17px]  relative ${isDarkmode ? "border" : "border border-black"}`}>
+                            <div className={` w-[290px] h-[274px] lg:w-[20vw] lg:h-[35.5vh] pl-[10px] lg:pl-[20px] pt-[10px] lg:pt-[17px]  relative ${isDarkmode ? "border" : "border border-black"}`}>
 
-                                <div className="w-[300px] lg:w-[344px] h-[178px] lg:h-[211px] relative">
+                                <div className="w-[300px] lg:w-[20vw] h-[178px] lg:h-[21vh] relative hover:scale-[1.05] transform duration-300">
                                     <Image src={item.img} alt="" fill />
                                 </div>
 

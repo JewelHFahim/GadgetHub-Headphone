@@ -53,33 +53,3 @@ const CommonHeader = () => {
 export default CommonHeader
 
 
-
-// import "./CommonHeader.css"
-// import Image from 'next/image'
-// import { useContext } from "react"
-// import { ThemeContext } from "@/Context/AppContext"
-// import { usePathname } from 'next/navigation'
-
-// const CommonHeader = () => {
-//     const { isDarkmode } = useContext(ThemeContext);
-//     const pathname = usePathname()
-
-//     const imageMap = {
-//         "/headset": "/bgi.png",
-//         "/headset/gaming": "/blog3.png",
-//         "/headset/music": "/blog5.png",
-//         "/blog": "/LatestHP2.png",
-//     };
-
-//     const imagePath = imageMap[pathname] || "/defaultImage.jpg";
-
-//     return (
-//         <div className={`commonCont ${isDarkmode ? "commonContDark" : "commonContLight"}`}>
-//             <div className='commonImgCont'>
-//                 <Image src={imagePath} alt='' width={1715} height={700} className='commonImg' />
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default CommonHeader;

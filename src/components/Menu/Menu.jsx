@@ -1,8 +1,7 @@
 "use client"
 
-
 import { ThemeContext } from '@/Context/AppContext'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import "./Menu.css"
@@ -12,8 +11,12 @@ import { FaFacebookF, FaInstagram, FaMinus, FaTiktok, FaTwitter, FaYoutube } fro
 import { BiSearchAlt } from 'react-icons/bi';
 import { CgCloseO } from 'react-icons/cg';
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 
 const Menu = ({ isOpen, toggleDrawer  }) => {
+    const pathname = usePathname()
+
 
     const { isDarkmode } = useContext(ThemeContext)
 
@@ -24,6 +27,10 @@ const Menu = ({ isOpen, toggleDrawer  }) => {
         toggleDrawer();
     };
 
+    useEffect(() => {
+        // Close the menu when the route changes
+        toggleDrawer();
+      }, [pathname]); 
 
     // Menus
     const menus = [
@@ -58,7 +65,6 @@ const Menu = ({ isOpen, toggleDrawer  }) => {
             url: "contact"
         },
     ]
-
 
     return (
         <>

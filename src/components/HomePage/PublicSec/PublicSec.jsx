@@ -93,7 +93,7 @@ const PublicSec = () => {
     ]
 
     return (
-        <div className='  lg:mt-[120px] pt-[10px] lg:pt-[0px] lg:mr-[315px] mr-[10px]'>
+        <div className='  lg:mt-[120px] pt-[10px] lg:pt-[0px] lg:mr-[15vw] mr-[10px]'>
 
             <div className="text-right">
 
@@ -122,7 +122,7 @@ const PublicSec = () => {
                 {
                     datas.map((data, i) => (
                         <SwiperSlide key={i} className="relative">
-                            <Image src={data.img} alt='' width={262} height={466} />
+                            <Image src={data.img} alt='' width={262} height={466} className="transform duration-300 hover:scale-[1.0   5] " />
                         </SwiperSlide>
                     ))
                 }
