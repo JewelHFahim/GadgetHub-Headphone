@@ -23,10 +23,6 @@ const Blog = () => {
 
             <CommonHeader />
 
-            {/* Follo Us  */}
-            <div className='hidden lg:block absolute left-[-170px] top-[650px]'>
-                <FollowUs />
-            </div>
 
             {/* Title */}
             <div className={`text-left lg:py-2 lg:pl-[94px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>

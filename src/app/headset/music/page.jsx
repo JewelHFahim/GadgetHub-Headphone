@@ -16,9 +16,9 @@ const Music = () => {
         <div className='relative'>
             <CommonHeader />
 
-            <div className='hidden lg:block absolute left-[-170px] top-[580px]'>
+            {/* <div className='hidden lg:block absolute left-[-170px] top-[580px]'>
                 <FollowUs />
-            </div>
+            </div> */}
 
             <div className={`text-left lg:pt-2 lg:pl-[94px] pb-[5px] bg-[#191919] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
                 <p className={`ml-[10px] lg:ml-0 font-poppins text-[25px] lg:text-[60px] font-[800] uppercase leading-[40px] ${isDarkmode ? "text-white" : "text-bgPrimary"}`}>HEADSET</p>

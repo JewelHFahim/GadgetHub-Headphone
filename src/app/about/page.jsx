@@ -96,9 +96,9 @@ const About = () => {
 
 
 
-            <div className='hidden lg:block absolute right-[-150px] top-[485px]'>
+            {/* <div className='hidden lg:block absolute right-[-150px] top-[485px]'>
                 <FollowUs />
-            </div>
+            </div> */}
 
 
 

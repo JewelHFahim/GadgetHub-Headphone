@@ -16,9 +16,9 @@ const BlogPost = () => {
     return (
         <div className={`relative ${isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
 
-            <div className='hidden lg:block absolute right-[-150px] top-[500px]'>
+            {/* <div className='hidden lg:block absolute right-[-150px] top-[500px]'>
                 <FollowUs />
-            </div>
+            </div> */}
 
             {/* Header */}
             <div className={isDarkmode ? `${styles.commonCont}` : `${styles.commonContLight}`}>

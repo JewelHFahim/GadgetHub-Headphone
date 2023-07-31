@@ -15,9 +15,9 @@ const Gaming = () => {
         <div>
             <CommonHeader />
 
-            <div className='hidden lg:block absolute left-[-170px] top-[650px]'>
+            {/* <div className='hidden lg:block absolute left-[-170px] top-[650px]'>
                 <FollowUs />
-            </div>
+            </div> */}
 
             <div className={`text-left lg:py-2 lg:pl-[100px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
                 <p className={` font-poppins text-[25px] lg:text-[60px] font-[800] uppercase leading-[40px] ml-[10px] lg:ml-0 ${isDarkmode ? "text-white" : "text-bgPrimary"}`} >HEADSET</p>
