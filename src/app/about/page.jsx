@@ -9,6 +9,7 @@ import PrimaryTitle from '@/utils/PrimaryTitle'
 import LatestSlider from '@/components/HomePage/Latest/LatestSlider'
 import Gallery from './Gallery'
 import { ThemeContext } from '@/Context/AppContext'
+import FollowUs from '@/utils/FollowUs/FollowUs'
 
 const About = () => {
 
@@ -22,35 +23,38 @@ const About = () => {
 
     const services = [
         {
-            title: 'Gaming Headphone',
-            img: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png",
-            desc: description
+            title: ` GAMING HEADPHONE`,
+            desc: description,
+            icon: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png"
         },
         {
-            title: 'Waranty Service',
-            img: isDarkmode ? "/WService.svg" : "/WServiceDark.png",
-            desc: description
+            title: " WARRANTY SERVICE",
+            desc: description,
+            icon: isDarkmode ? "/WService.svg" : "/WServiceDark.png"
         },
         {
-            title: '24Hour Service',
-            img: isDarkmode ? "/SService.svg" : "/SServiceDark.png",
-            desc: description
+            title: " 24HOUR SERVICE",
+            desc: description,
+            icon: isDarkmode ? "/SService.svg" : "/SServiceDark.png"
+
         },
         {
-            title: 'Gaming Headphone',
-            img: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png",
-            desc: description
+            title: ` GAMING HEADPHONE`,
+            desc: description,
+            icon: isDarkmode ? "/GHeadphone.svg" : "/GHeadphoneDark.png"
         },
         {
-            title: 'Waranty Service',
-            img: isDarkmode ? "/WService.svg" : "/WServiceDark.png",
-            desc: description
+            title: " WARRANTY SERVICE",
+            desc: description,
+            icon: isDarkmode ? "/WService.svg" : "/WServiceDark.png",
         },
         {
-            title: '24Hour Service',
-            img: isDarkmode ? "/SService.svg" : "/SServiceDark.png",
-            desc: description
+            title: " 24HOUR SERVICE",
+            desc: description,
+            icon: isDarkmode ? "/SService.svg" : "/SServiceDark.png"
+
         },
+
     ]
 
     const datas = [
@@ -88,7 +92,15 @@ const About = () => {
 
 
     return (
-        <div className={` ${isDarkmode ? "bg-bgPrimary" : "bg-white"} `}>
+        <div className={`relative ${isDarkmode ? "bg-bgPrimary" : "bg-white"} `}>
+
+
+
+            <div className='hidden lg:block absolute right-[-150px] top-[485px]'>
+                <FollowUs />
+            </div>
+
+
 
             {/* Header */}
             <div className={` ${styles.commonCont} ${isDarkmode ? styles.forDarkMode : styles.forLightMode} `}>
@@ -125,12 +137,12 @@ const About = () => {
             </div>
 
             {/* Desktop Service Section */}
-            <div className={`hidden mt-[10px] lg:grid lg:grid-cols-3 justify-center md:gap-[20px] lg:gap-[37px] md:px-[150px] lg:px-[300px] y-[85px] py-[85px]  ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
+            <div className={`hidden mt-[10px] lg:grid lg:grid-cols-3 justify-center md:gap-[20px] lg:gap-[37px] md:px-[150px] lg:px-[15vw] py-[85px]  ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
                 {
                     services.map((item, i) => (
-                        <div key={i} className={`w-[409px] h-[458px] border p-[35px] ${isDarkmode ? "border-white border-opacity-[50%]" : "border-black"}`}>
+                        <div key={i} className={`w-[100%] h-[100%] border p-[8%] ${isDarkmode ? "border-white border-opacity-[50%]" : "border-black"}`}>
                             <div className='flex items-center gap-[32px]'>
-                                <Image src={item.img} alt="" width={85} height={80} />
+                                <Image src={item.icon} alt="" width={85} height={80} />
 
                                 <h2 className={`text-[30px] font-[800] font-poppins ${isDarkmode ? "text-white" : "text-black"}`}>{item.title}</h2>
                             </div>
@@ -160,7 +172,7 @@ const About = () => {
 
             {/* Mobile Service Section */}
             <div className={`lg:hidden px-[10px] my-[40px] pt-[30px] ${isDarkmode ? "bg-bgPrimary" : "bg-bgOffWhite"}`}>
-                <FeatureSlider datas={datas} />
+                <FeatureSlider services={services} />
             </div>
 
             {/* WE BUILD YOUR DEMAND */}
@@ -188,7 +200,7 @@ const About = () => {
             </div>
 
             {/* Best Headphone */}
-            <div className=' lg:ml-[315px] mt-[26px] lg:mt-[180px]'>
+            <div className=' lg:ml-[16vw] mt-[26px] lg:mt-[180px]'>
                 <div className='flex justify-between items-center lg:mr-[315px]'>
 
                     <div className=''>
@@ -218,7 +230,7 @@ const About = () => {
             </div>
 
             {/* Headphone Daily Use */}
-            <div className={` pl-[50px] px-[20px] md:px-[60px] lg:px-[400px] pb-[40px] pt-[100px] mt-[20px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
+            <div className={` pl-[50px] px-[20px] md:px-[60px] lg:px-[18vw] pb-[40px] pt-[100px] mt-[20px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
 
                 <div className='flex items-center gap-[20px] md:gap-[50px] lg:gap-[150px]'>
 
@@ -299,7 +311,7 @@ const About = () => {
             </div>
 
             {/* Gallery */}
-            <div className={` ${isDarkmode ? "bg-bgSecondary" : "bg-white"}`}>
+            <div className={` ${isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
                 <PrimaryTitle className="text-[80px] text-center mb-[40px]">Gallelry</PrimaryTitle>
                 <Gallery />
             </div>

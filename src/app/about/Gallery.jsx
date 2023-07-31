@@ -82,7 +82,7 @@ const Gallery = () => {
       `}</style>
 
 
-      <div className={`px-[20px] md:px-[50px] lg:px-[280px] py-[30px] ${isDarkmode ? "bg-bgPrimary" : "bg-bgOffWhite"} `}>
+      <div className={`px-[20px] md:px-[50px] lg:px-[280px] py-[30px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"} `}>
 
         <div className="grid-wrapper">
 

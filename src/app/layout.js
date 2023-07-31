@@ -26,15 +26,15 @@ export default function RootLayout({ children }) {
 
           <div className='relative'>
 
-            <NavDesk />
+            {/* <NavDesk /> */}
 
-            <MenuHelper />
+            {/* <MenuHelper /> */}
 
-            <div className='absolute top-[20px] right-[100px] lg:right-2 lg:top-[220px] z-[99]'><ToggoleBtn /></div>
+            {/* <div className='absolute top-[20px] right-[100px] lg:right-2 lg:top-[220px] z-[99]'><ToggoleBtn /></div> */}
 
             {children}
 
-            <Footer />
+            {/* <Footer /> */}
 
           </div>
 

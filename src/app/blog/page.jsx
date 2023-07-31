@@ -23,10 +23,12 @@ const Blog = () => {
 
             <CommonHeader />
 
+            {/* Follo Us  */}
             <div className='hidden lg:block absolute left-[-170px] top-[650px]'>
                 <FollowUs />
             </div>
 
+            {/* Title */}
             <div className={`text-left lg:py-2 lg:pl-[94px] ${isDarkmode ? "bg-bgSecondary" : "bg-bgOffWhite"}`}>
 
                 <p className={`font-poppins text-[25px] lg:text-[60px] font-[900] uppercase lg:leading-[50px] ml-[10px] lg:ml-0  ${isDarkmode ? "text-white"
@@ -37,6 +39,7 @@ const Blog = () => {
                 </div>
             </div>
 
+            {/* Blog Content */}
             <div className={`flex justify-center py-[40px] lg:py-[75px] px-[10px] lg:px-[100px] ${isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
 
                 <div className='grid items-center grid-cols-2 lg:grid-cols-3 gap-[20px] lg:gap-[100px]'>
@@ -251,9 +254,11 @@ const Blog = () => {
                     </Link>
 
                 </div>
-
+                
             </div>
 
+
+            {/* navigation btn */}
             <div className={`flex justify-around items-center ${isDarkmode ? "bg-bgPrimary" : "bg-white"}`}>
 
                 <div className='w-[51px] h-[41px] relative'>
